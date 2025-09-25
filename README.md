@@ -38,42 +38,15 @@ Ce site présente mon parcours, mes projets et mon CV, dans le cadre de mes étu
 
 ##  Stack & outils
 
-- **Langages** : HTML5, CSS3
+- **Langages** : HTML5, CSS3, JS
 - **Hébergement** : GitHub Pages
-- **Éditeur** : VS Code
 - **Contrôle de version** : Git & GitHub
 
 ---
 
 ##  Structure du projet
 
-portfolio/
-│
-├── index.html (Page d'accueil)
-├── cv.html (ou section)
-├── projet-pro.html (ou section)
-├── portfolio-activites.html (ou section)
-├── auto-evaluation.html (ou section)
-│
-├── assets/
-│   ├── css/
-│   │   ├── main.css
-│   │   ├── responsive.css
-│   │   └── animations.css
-│   ├── js/
-│   │   ├── main.js
-│   │   ├── activities.js
-│   │   └── navigation.js
-│   ├── images/
-│   │   ├── profile/
-│   │   ├── certificates/
-│   │   └── projects/
-│   └── documents/
-│       ├── cv.pdf
-│       └── preuves/
-│
-└── README.md
-
+*(à insérer)*
 ---
 
 ##  Accessibilité (WCAG 2.1 AA)
