@@ -5,7 +5,7 @@ Ce site présente mon parcours, mes projets et mon CV, dans le cadre de mes étu
 
 ---
 
-## 🚀 Aperçu
+##  Aperçu
 
 - **[Version en ligne (GitHub Pages)](https://mm-elmazani.github.io/mm-elmazani-portfolio/)**  
 - Projet 100% statique : **HTML + CSS**  
@@ -17,7 +17,7 @@ Ce site présente mon parcours, mes projets et mon CV, dans le cadre de mes étu
 
 ---
 
-## 📸 Captures d’écran
+##  Captures d’écran
 
 ### Version desktop
 *(à insérer)*
@@ -27,7 +27,7 @@ Ce site présente mon parcours, mes projets et mon CV, dans le cadre de mes étu
 
 ---
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
 - Présentation claire et sobre de mon profil.
 - CV consultable directement en ligne et disponible en **téléchargement PDF**.
@@ -36,7 +36,7 @@ Ce site présente mon parcours, mes projets et mon CV, dans le cadre de mes étu
 
 ---
 
-## 🛠️ Stack & outils
+##  Stack & outils
 
 - **Langages** : HTML5, CSS3
 - **Hébergement** : GitHub Pages
@@ -45,7 +45,7 @@ Ce site présente mon parcours, mes projets et mon CV, dans le cadre de mes étu
 
 ---
 
-## 📂 Structure du projet
+##  Structure du projet
 
 portfolio/
 │
@@ -76,21 +76,16 @@ portfolio/
 
 ---
 
-## ♿ Accessibilité (WCAG 2.1 AA)
+##  Accessibilité (WCAG 2.1 AA)
 
 - Navigation clavier (focus visible, skip-link).
 - Hiérarchie de titres respectée.
 - Texte alternatif pour les images.
 - Contrastes vérifiés.
 
----
-## 📜 Licence
-
-Ce projet est sous licence MIT.
-Vous êtes libre de le réutiliser, modifier et partager avec attribution.
 
 ---
-## 📬 Contact
+##  Contact
 
 Email : mohamedelmazani.pro@gmail.com
 
