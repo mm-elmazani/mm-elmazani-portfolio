@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'activités - 60 heures valorisées - Mohamed Mokhtar El Mazani">
+    <meta name="keywords" content="portfolio, activités, EPHEC, formation, compétences">
+    <meta name="author" content="Mohamed Mokhtar El Mazani">
+    
+    <title>Portfolio d'Activités - Mohamed El Mazani</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* Portfolio Specific Styles */
+        .portfolio-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 120px 0 60px;
+            color: var(--accent);
+            text-align: center;
+        }
+        
+        .portfolio-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .portfolio-subtitle {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        /* Statistics Cards */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: -30px auto 3rem;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+        
+        .stat-card .stat-target {
+            font-size: 1rem;
+            color: var(--gray);
+        }
+        
+        .stat-card.complete {
+            border-top: 3px solid var(--success);
+        }
+        
+        .stat-card.warning {
+            border-top: 3px solid var(--warning);
+        }
+        
+        .stat-card.danger {
+            border-top: 3px solid var(--danger);
+        }
+        
+        .stat-label {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            padding: 0 2rem;
+        }
+        
+        .progress-bar-wrapper {
+            background: var(--light);
+            border-radius: 20px;
+            height: 30px;
+            overflow: hidden;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        #main-progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+            border-radius: 20px;
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 1rem;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        /* Filters and Controls */
+        .controls-section {
+            background: var(--light);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .controls-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .controls-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .filters {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .filters select {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filters select:hover {
+            border-color: var(--secondary);
+        }
+        
+        .search-input {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            width: 300px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(92, 92, 153, 0.1);
+        }
+        
+        .btn-secondary {
+            padding: 0.5rem 1rem;
+            background: white;
+            color: var(--accent);
+            border: 1px solid var(--gray-light);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            border-color: var(--secondary);
+        }
+        
+        /* Activities Grid */
+        .activities-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        /* Activity Card */
+        .activity-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .activity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--accent);
+            transition: height 0.3s ease;
+        }
+        
+        .activity-card:hover::before {
+            height: 100%;
+        }
+        
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .activity-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .activity-badge.completed {
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+        }
+        
+        .activity-badge.pending {
+            background: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+        }
+        
+        .activity-badge.draft {
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--warning);
+        }
+        
+        .activity-hours {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .activity-title {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+        
+        .activity-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        
+        .activity-description {
+            color: var(--dark);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .activity-proof {
+            background: var(--light);
+            padding: 0.75rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+        }
+        
+        .proof-file {
+            color: var(--secondary);
+            margin-left: 0.5rem;
+        }
+        
+        .activity-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-tag {
+            padding: 0.25rem 0.75rem;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .btn-expand {
+            width: 100%;
+            padding: 0.75rem;
+            background: transparent;
+            color: var(--secondary);
+            border: 1px solid var(--primary);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .btn-expand:hover {
+            background: var(--primary);
+            color: var(--accent);
+        }
+        
+        /* Reflection Section */
+        .activity-reflection {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light);
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .reflection-content h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .reflection-section {
+            margin-bottom: 1.25rem;
+        }
+        
+        .reflection-section h5 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .reflection-section p {
+            color: var(--dark);
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        /* Validation Section */
+        .validation-section {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 900px;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .validation-section h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        
+        .validation-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .validation-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            margin-bottom: 0.5rem;
+        }
+        
+        .theme-distribution {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .theme-item {
+            display: grid;
+            grid-template-columns: 120px 1fr 60px;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .theme-name {
+            font-weight: 500;
+            color: var(--accent);
+        }
+        
+        .theme-bar-container {
+            background: var(--light);
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .theme-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+        
+        .theme-hours {
+            text-align: right;
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        /* Suggestions */
+        .suggestions-section {
+            background: var(--light);
+            padding: 3rem 0;
+        }
+        
+        #suggestions {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .suggestion-section {
+            margin-bottom: 2rem;
+        }
+        
+        .missing-themes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        
+        .theme-badge {
+            padding: 0.5rem 1rem;
+            background: white;
+            color: var(--accent);
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .recommended-activities {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .recommended-activities li {
+            padding: 0.75rem;
+            background: white;
+            border-radius: var(--border-radius);
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .recommended-activities li:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Empty State */
+        .no-activities {
+            text-align: center;
+            padding: 3rem;
+            color: var(--gray);
+        }
+        
+        .error-message {
+            text-align: center;
+            padding: 3rem;
+            color: var(--danger);
+        }
+        
+        .error-message button {
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .error-message button:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body data-page="portfolio">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MEM</span>
+                <span class="logo-dot">.</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cv.html" class="nav-link">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projet-pro.html" class="nav-link">Projet Pro</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio-activites.html" class="nav-link active">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auto-evaluation.html" class="nav-link">Auto-évaluation</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1 class="portfolio-title">Portfolio d'Activités</h1>
+            <p class="portfolio-subtitle">60 heures d'apprentissage valorisées</p>
+        </div>
+    </section>
+    
+    <!-- Statistics Cards -->
+    <div class="stats-container">
+        <div class="stat-card" id="stat-hours">
+            <span class="stat-value">0</span>
+            <span class="stat-target">/ 60</span>
+            <span class="stat-label">Heures totales</span>
+        </div>
+        <div class="stat-card" id="stat-themes">
+            <span class="stat-value">0</span>
+            <span class="stat-target">/ 6</span>
+            <span class="stat-label">Thèmes couverts</span>
+        </div>
+        <div class="stat-card" id="stat-activities">
+            <span class="stat-value">0</span>
+            <span class="stat-target">/ 6</span>
+            <span class="stat-label">Activités réalisées</span>
+        </div>
+        <div class="stat-card" id="stat-completion">
+            <span class="stat-value">0%</span>
+            <span class="stat-label">Progression</span>
+        </div>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar-wrapper">
+            <div id="main-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                0%
+            </div>
+        </div>
+    </div>
+    
+    <!-- Controls Section -->
+    <section class="controls-section">
+        <div class="controls-container">
+            <div class="controls-row">
+                <div id="filters-container" class="filters">
+                    <!-- Filters will be inserted here by JS -->
+                </div>
+                <div id="search-container">
+                    <!-- Search will be inserted here by JS -->
+                </div>
+                <div id="sort-container">
+                    <!-- Sort will be inserted here by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Activities Grid -->
+    <section class="activities-section">
+        <div class="activities-grid" id="activities-list">
+            <!-- Activities will be loaded here by JavaScript -->
+            <div class="loading">
+                <p>Chargement des activités...</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Validation Status -->
+    <section class="container">
+        <div class="validation-section" id="validation-status">
+            <!-- Validation status will be inserted here by JS -->
+        </div>
+    </section>
+    
+    <!-- Suggestions -->
+    <section class="suggestions-section">
+        <div id="suggestions">
+            <!-- Suggestions will be inserted here by JS -->
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Mohamed Mokhtar El Mazani - Portfolio TI EPHEC</p>
+                <p class="footer-note">Bachelor en Technologies de l'Informatique - Dernière mise à jour : <span id="last-update">-</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/activities-simple.js"></script>
+    
+    <!-- Page Specific Scripts -->
+    <script>
+        // Update last update date
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get last update from data
+            if (window.ActivitiesManager && window.ActivitiesManager.getData) {
+                setTimeout(() => {
+                    const data = window.ActivitiesManager.getData();
+                    if (data && data.metadata) {
+                        document.getElementById('last-update').textContent = 
+                            new Date(data.metadata.lastUpdate).toLocaleDateString('fr-FR');
+                    }
+                }, 1000);
+            }
+        });
+        
+        // Smooth scroll to top when clicking on stats
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                document.getElementById('activities-list').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "lastUpdate": "2024-12-20",
+    "version": "1.0",
+    "author": "Mohamed Mokhtar El Mazani",
+    "validated": false,
+    "totalHoursRequired": 60,
+    "minThemes": 6,
+    "minActivities": 6
+  },
+  "activities": [
+    {
+      "id": "act_001",
+      "theme": "Sécurité",
+      "title": "Hackathon Cybersecurity Challenge",
+      "type": "Hackathon",
+      "hours": 10,
+      "date": "2024-03-15",
+      "status": "completed",
+      "proof": {
+        "type": "certificate",
+        "description": "Certificat de participation",
+        "file": "cert_cybersec_2024.pdf"
+      },
+      "description": "Participation au hackathon de cybersécurité organisé par l'EPHEC. Résolution de 8 challenges sur 12 en équipe.",
+      "reflection": {
+        "context": "J'ai participé au Cybersecurity Challenge organisé par l'EPHEC en mars 2024. Cet événement intensif de 10 heures m'a permis de mettre en pratique mes connaissances en sécurité informatique dans un environnement compétitif.",
+        "facts": "Durant ce hackathon, j'ai travaillé sur plusieurs défis de sécurité : cryptographie (3 challenges), analyse de vulnérabilités web (3 challenges), reverse engineering (1 challenge) et forensics (1 challenge). Notre équipe de 4 personnes a réussi à résoudre 8 challenges sur les 12 proposés, nous classant 5ème sur 20 équipes.",
+        "projectLink": "Cette expérience s'aligne parfaitement avec mon projet professionnel orienté vers l'infrastructure IT sécurisée. La sécurité est un aspect fondamental de l'administration système, domaine dans lequel je souhaite me spécialiser. Les compétences acquises seront directement applicables dans mon futur stage.",
+        "skills": "J'ai renforcé mes compétences techniques en utilisant des outils comme Wireshark pour l'analyse réseau, Burp Suite pour les tests d'intrusion web, et John the Ripper pour le cassage de mots de passe. J'ai également développé ma capacité à travailler efficacement sous pression et à collaborer en équipe pour résoudre des problèmes complexes.",
+        "conclusion": "Ce hackathon m'a fait prendre conscience de l'importance de la veille technologique en cybersécurité. Je compte approfondir mes connaissances en suivant des formations sur les techniques d'exploitation les plus récentes et en pratiquant régulièrement sur des plateformes comme HackTheBox."
+      },
+      "skills": ["Cybersécurité", "Wireshark", "Burp Suite", "Analyse de vulnérabilités", "Travail d'équipe", "Gestion du stress"]
+    },
+    {
+      "id": "act_002",
+      "theme": "Hardware",
+      "title": "Réparation de smartphones pour particuliers",
+      "type": "Autre",
+      "hours": 8,
+      "date": "2024-02-10",
+      "status": "completed",
+      "proof": {
+        "type": "photos",
+        "description": "Photos des réparations et factures clients",
+        "file": "repairs_smartphones_2024.zip"
+      },
+      "description": "Réparation de 5 smartphones différents : remplacement d'écrans, batteries et ports de charge.",
+      "reflection": {
+        "context": "Entre janvier et février 2024, j'ai effectué la réparation de 5 smartphones pour des particuliers de mon entourage. Cette activité découle de ma passion pour le hardware et de mon expérience personnelle en réparation électronique.",
+        "facts": "Les interventions réalisées incluaient : 2 remplacements d'écran (iPhone 11 et Samsung A52), 2 changements de batterie (iPhone 8 et Xiaomi Redmi Note 9), et 1 réparation de port de charge (OnePlus 7). Chaque réparation a nécessité entre 1h30 et 2h de travail minutieux, incluant le diagnostic, la commande des pièces et l'intervention.",
+        "projectLink": "Cette activité renforce directement mes compétences en diagnostic et résolution de problèmes hardware, essentielles pour un futur technicien IT. La capacité à réparer et maintenir du matériel informatique est un atout majeur dans le support technique, domaine que je vise pour mon stage.",
+        "skills": "J'ai perfectionné ma dextérité manuelle et ma précision dans la manipulation de composants fragiles. J'ai appris à gérer la relation client, depuis le diagnostic initial jusqu'à la livraison, en passant par la communication sur les délais et les coûts. La gestion des stocks de pièces détachées m'a initié aux problématiques logistiques.",
+        "conclusion": "Cette expérience m'a confirmé mon intérêt pour le hardware et m'a donné confiance dans ma capacité à gérer des interventions techniques de manière autonome. Je prévois d'étendre mes compétences aux réparations de laptops et tablettes."
+      },
+      "skills": ["Hardware", "Diagnostic", "Micro-soudure", "Relation client", "Précision technique", "Gestion des stocks"]
+    },
+    {
+      "id": "act_003",
+      "theme": "Hardware",
+      "title": "Montage PC Gaming haute performance",
+      "type": "Autre",
+      "hours": 5,
+      "date": "2024-01-20",
+      "status": "completed",
+      "proof": {
+        "type": "photos",
+        "description": "Photos du montage et résultats benchmarks",
+        "file": "pc_gaming_build_2024.pdf"
+      },
+      "description": "Assemblage complet d'un PC gaming sur mesure pour un client, de la sélection des composants à l'optimisation.",
+      "reflection": {
+        "context": "En janvier 2024, un ami m'a sollicité pour l'assemblage d'un PC gaming avec un budget de 2000€. Ce projet m'a permis de mettre en pratique mes connaissances en hardware acquises durant ma formation et mon expérience personnelle.",
+        "facts": "Le projet s'est déroulé en plusieurs phases : analyse des besoins (jeux visés, résolution souhaitée), sélection des composants (RTX 4070, Ryzen 7 5800X3D, 32GB DDR4), assemblage physique avec cable management optimisé, installation de Windows 11 et des drivers, overclocking CPU/GPU et tests de stabilité. Les benchmarks finaux montraient d'excellentes performances : 144 FPS constants en 1440p sur les AAA récents.",
+        "projectLink": "Cette expérience concrète en assemblage et optimisation hardware est directement applicable à mon futur métier en support IT. La capacité à conseiller, assembler et optimiser des configurations est un atout majeur pour un technicien informatique.",
+        "skills": "J'ai approfondi mes connaissances sur l'architecture des PC modernes, l'optimisation des performances via BIOS, et la gestion thermique. Le conseil client m'a permis de développer ma capacité à traduire des besoins en solutions techniques. La documentation du processus m'a initié aux bonnes pratiques professionnelles.",
+        "conclusion": "Ce projet m'a donné une vision complète du cycle de vie d'un PC, de la conception à la livraison. Je souhaite maintenant me former sur les configurations serveur et workstation pour élargir mon champ de compétences."
+      },
+      "skills": ["Assemblage PC", "Overclocking", "Optimisation Windows", "Conseil technique", "Gestion thermique", "Benchmarking"]
+    },
+    {
+      "id": "act_004",
+      "theme": "Électronique/IoT",
+      "title": "Laboratoire électronique - Soudure et prototypage",
+      "type": "Autre",
+      "hours": 2,
+      "date": "2024-04-05",
+      "status": "completed",
+      "proof": {
+        "type": "photos",
+        "description": "Photos des circuits réalisés",
+        "file": "labo_electronique_2024.jpg"
+      },
+      "description": "Session pratique de soudure de composants et création de circuits dans le laboratoire électronique de l'EPHEC.",
+      "reflection": {
+        "context": "Dans le cadre du cours d'électronique digitale, j'ai participé à une session de laboratoire de 2 heures focalisée sur la soudure de précision et le prototypage de circuits.",
+        "facts": "Durant cette session, j'ai réalisé la soudure de composants CMS sur PCB, créé des connexions propres entre différents modules, et testé les circuits avec multimètre et oscilloscope. Le projet final était un circuit de régulation de tension avec indicateur LED.",
+        "projectLink": "Ces compétences en électronique fondamentale complètent ma formation IT en me donnant une compréhension hardware au niveau le plus bas. Cette connaissance est précieuse pour diagnostiquer des problèmes matériels complexes.",
+        "skills": "J'ai développé ma précision manuelle dans la soudure de composants miniatures, appris à lire et interpréter des schémas électriques, et maîtrisé l'utilisation d'instruments de mesure. La patience et la minutie requises m'ont appris l'importance de la méthode en électronique.",
+        "conclusion": "Bien que courte, cette expérience m'a ouvert les yeux sur la complexité de l'électronique moderne. Je prévois de poursuivre avec des projets Arduino/Raspberry Pi pour combiner électronique et programmation."
+      },
+      "skills": ["Soudure CMS", "Lecture de schémas", "Multimètre", "Oscilloscope", "Prototypage", "Précision manuelle"]
+    }
+  ],
+  "statistics": {
+    "currentTotalHours": 25,
+    "remainingHours": 35,
+    "currentThemes": ["Sécurité", "Hardware", "Électronique/IoT"],
+    "themesCount": 3,
+    "activitiesCount": 4,
+    "completionPercentage": 41.67
+  },
+  "validation": {
+    "hoursCheck": "❌ Manque 35 heures",
+    "themesCheck": "❌ Manque 3 thèmes (minimum 6)",
+    "activitiesCheck": "❌ Manque 2 activités (minimum 6)",
+    "themeDistribution": {
+      "Sécurité": 10,
+      "Hardware": 13,
+      "Électronique/IoT": 2
+    }
+  },
+  "suggestions": {
+    "missingThemes": ["Développement", "Réseaux", "Soft Skills", "Langues", "Communication", "Droit IT"],
+    "recommendedActivities": [
+      "Formation en ligne Python/JavaScript (10h)",
+      "Configuration réseau VLAN/Routing (8h)",
+      "Présentation projet devant classe (5h)",
+      "Certification Anglais technique (10h)",
+      "Participation IT Job Day EPHEC (2h)"
+    ]
+  }
+}
