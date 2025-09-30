@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projet Professionnel - Mohamed Mokhtar El Mazani - EPHEC">
+    <meta name="keywords" content="projet professionnel, stage, IT, EPHEC, carrière">
+    <meta name="author" content="Mohamed Mokhtar El Mazani">
+    
+    <title>Projet Professionnel - Mohamed El Mazani</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* Hero Section */
+        .project-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            color: white;
+            margin-top: 2rem;
+            font-weight: 500;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 4rem 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--light);
+        }
+        
+        .section-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+        
+        .section-description {
+            color: var(--gray);
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+        
+        /* Philosophy Card */
+        .philosophy-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin: 3rem 0;
+            border-left: 4px solid var(--secondary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .philosophy-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 100px;
+            color: var(--primary);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+        
+        .philosophy-text {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--dark);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .philosophy-author {
+            text-align: right;
+            margin-top: 1.5rem;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        /* Interest Cards */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .interest-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+        }
+        
+        .interest-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .interest-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .interest-title {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .interest-description {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Stage Requirements */
+        .requirements-list {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .requirement-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+        }
+        
+        .requirement-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .requirement-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--secondary);
+        }
+        
+        .requirement-content h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .requirement-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Skills Development */
+        .skills-section {
+            background: linear-gradient(135deg, var(--light) 0%, rgba(204, 204, 255, 0.2) 100%);
+            padding: 4rem 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .skill-category h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-list li:hover {
+            transform: translateX(5px);
+            border-left-color: var(--secondary);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border: 4px solid white;
+            border-radius: 50%;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-description {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--accent);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-text {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-white {
+            background: white;
+            color: var(--accent);
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: var(--accent);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-dot {
+                left: 30px;
+            }
+        }
+    </style>
+</head>
+<body data-page="project">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MEM</span>
+                <span class="logo-dot">.</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cv.html" class="nav-link">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projet-pro.html" class="nav-link active">Projet Pro</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio-activites.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auto-evaluation.html" class="nav-link">Auto-évaluation</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Mon Projet Professionnel</h1>
+            <p class="hero-subtitle">Phase d'Exploration et de Découverte</p>
+            <span class="hero-badge">🎯 Focus : Stage de fin d'études 2025</span>
+        </div>
+    </section>
+    
+    <!-- Philosophy Section -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Ma Philosophie</h2>
+                <p class="section-description">Une approche pragmatique et ouverte de ma carrière</p>
+            </div>
+            
+            <div class="philosophy-card scroll-animate">
+                <p class="philosophy-text">
+                    En tant qu'étudiant en 3ème année de Technologies de l'Informatique, je suis conscient que le monde de l'IT est vaste et en constante évolution. Ma priorité actuelle n'est pas de définir un plan de carrière rigide, mais plutôt de trouver un stage enrichissant qui me permettra d'explorer différents aspects de l'informatique et de découvrir ce qui me passionne vraiment.
+                </p>
+                <p class="philosophy-text" style="margin-top: 1.5rem;">
+                    Je crois fermement qu'une expérience concrète en entreprise vaut mille cours théoriques. C'est pourquoi je préfère garder l'esprit ouvert et laisser mon stage façonner mes choix professionnels futurs.
+                </p>
+                <p class="philosophy-author">— Mohamed Mokhtar El Mazani</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Current Interests -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Mes Domaines d'Intérêt Actuels</h2>
+                <p class="section-description">Les domaines qui captent mon attention et stimulent ma curiosité</p>
+            </div>
+            
+            <div class="interests-grid">
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🖥️</span>
+                    <h3 class="interest-title">Infrastructure IT</h3>
+                    <p class="interest-description">
+                        Administration système, virtualisation, cloud computing. J'aime comprendre comment fonctionne l'architecture qui fait tourner les applications.
+                    </p>
+                </div>
+                
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🔧</span>
+                    <h3 class="interest-title">Hardware & Diagnostic</h3>
+                    <p class="interest-description">
+                        Montage PC, réparation, optimisation. Ma passion pour le hardware me pousse à toujours chercher les meilleures performances.
+                    </p>
+                </div>
+                
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🔒</span>
+                    <h3 class="interest-title">Cybersécurité</h3>
+                    <p class="interest-description">
+                        Protection des systèmes, analyse de vulnérabilités. La sécurité est devenue indispensable dans notre monde connecté.
+                    </p>
+                </div>
+                
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🤝</span>
+                    <h3 class="interest-title">Support Technique</h3>
+                    <p class="interest-description">
+                        Résolution de problèmes, assistance utilisateurs. J'apprécie le contact humain et la satisfaction d'aider les autres.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stage Requirements -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Ce Que Je Recherche Pour Mon Stage</h2>
+                <p class="section-description">Les critères importants pour mon expérience de stage</p>
+            </div>
+            
+            <div class="requirements-list">
+                <div class="requirement-item scroll-animate-left">
+                    <span class="requirement-icon">🏢</span>
+                    <div class="requirement-content">
+                        <h4>Une entreprise avec une infrastructure IT complexe</h4>
+                        <p>
+                            Je souhaite intégrer une structure où je pourrai observer et participer à la gestion d'une infrastructure IT professionnelle, avec ses défis réels et ses contraintes de production.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="requirement-item scroll-animate-left">
+                    <span class="requirement-icon">⚡</span>
+                    <div class="requirement-content">
+                        <h4>L'opportunité de toucher au hardware ET au software</h4>
+                        <p>
+                            Mon idéal serait un stage polyvalent où je pourrais alterner entre configuration serveur, dépannage matériel, développement de scripts, et support utilisateur.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="requirement-item scroll-animate-left">
+                    <span class="requirement-icon">👥</span>
+                    <div class="requirement-content">
+                        <h4>Un environnement d'apprentissage avec des mentors</h4>
+                        <p>
+                            Je recherche une équipe bienveillante où je pourrai apprendre auprès de professionnels expérimentés, poser des questions, et progresser rapidement.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="requirement-item scroll-animate-left">
+                    <span class="requirement-icon">🚀</span>
+                    <div class="requirement-content">
+                        <h4>Des projets variés pour découvrir mes préférences</h4>
+                        <p>
+                            La diversité des missions est essentielle pour moi. Je veux explorer différents aspects de l'IT afin d'identifier ce qui me passionne vraiment et orienter mes choix futurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills to Develop -->
+    <section class="skills-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Compétences à Développer</h2>
+                <p class="section-description">Les domaines où je souhaite progresser durant mon stage</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category scroll-animate">
+                    <h3>🔧 Techniques</h3>
+                    <ul class="skill-list">
+                        <li>Administration Linux/Windows Server avancée</li>
+                        <li>Automatisation avec scripts (Bash, PowerShell, Python)</li>
+                        <li>Gestion de containers (Docker, Kubernetes)</li>
+                        <li>Monitoring et gestion des performances</li>
+                        <li>Sécurisation des infrastructures</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category scroll-animate">
+                    <h3>💼 Professionnelles</h3>
+                    <ul class="skill-list">
+                        <li>Gestion de projet IT</li>
+                        <li>Documentation technique</li>
+                        <li>Communication avec les clients</li>
+                        <li>Travail en équipe Agile/Scrum</li>
+                        <li>Résolution de problèmes sous pression</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category scroll-animate">
+                    <h3>📚 Certifications visées</h3>
+                    <ul class="skill-list">
+                        <li>CompTIA A+ (Hardware)</li>
+                        <li>Linux Professional Institute (LPIC-1)</li>
+                        <li>Microsoft Azure Fundamentals</li>
+                        <li>ITIL Foundation (Gestion des services IT)</li>
+                        <li>Cisco CCNA (après exploration réseau)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Timeline -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Ma Timeline</h2>
+                <p class="section-description">Les étapes clés de mon parcours professionnel</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Septembre 2023 - Juin 2025</div>
+                        <h4 class="timeline-title">Bachelor TI - EPHEC</h4>
+                        <p class="timeline-description">
+                            Formation complète en technologies de l'informatique, développement de compétences techniques et soft skills.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Février - Juin 2025</div>
+                        <h4 class="timeline-title">Stage de fin d'études</h4>
+                        <p class="timeline-description">
+                            Stage de minimum 13 semaines pour découvrir le monde professionnel et affiner mon projet de carrière.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Septembre 2025</div>
+                        <h4 class="timeline-title">Premier emploi</h4>
+                        <p class="timeline-description">
+                            Idéalement dans l'entreprise de stage si l'expérience est concluante, sinon dans un domaine identifié pendant le stage.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025-2027</div>
+                        <h4 class="timeline-title">Phase d'exploration</h4>
+                        <p class="timeline-description">
+                            Deux années pour approfondir mes compétences, obtenir des certifications, et définir ma spécialisation.
+                        </p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Types of Companies -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Types d'Entreprises Visées</h2>
+                <p class="section-description">Les environnements professionnels qui m'attirent</p>
+            </div>
+            
+            <div class="interests-grid">
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🏗️</span>
+                    <h3 class="interest-title">ESN / Consulting IT</h3>
+                    <p class="interest-description">
+                        Pour la diversité des clients et projets, l'exposition à différentes technologies et problématiques.
+                    </p>
+                </div>
+                
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🏭</span>
+                    <h3 class="interest-title">PME Industrielle</h3>
+                    <p class="interest-description">
+                        Pour l'aspect concret et tangible de l'IT au service de la production, avec des défis hardware/software.
+                    </p>
+                </div>
+                
+                <div class="interest-card scroll-animate">
+                    <span class="interest-icon">🏥</span>
+                    <h3 class="interest-title">Secteur Public/Santé</h3>
+                    <p class="interest-description">
+                        Pour l'impact social positif et les enjeux de sécurité et fiabilité des systèmes critiques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <h2 class="cta-title">Construisons l'Avenir Ensemble</h2>
+            <p class="cta-text">
+                Je suis ouvert aux opportunités de stage à partir de février 2025.<br>
+                N'hésitez pas à me contacter pour discuter de vos besoins et de mes motivations.
+            </p>
+            <div class="cta-buttons">
+                <a href="cv.html" class="btn-white">Voir mon CV</a>
+                <a href="mailto:mohamedelmazani.pro@gmail.com" class="btn-outline">Me contacter</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Mohamed Mokhtar El Mazani - Portfolio TI EPHEC</p>
+                <p class="footer-note">Projet professionnel en constante évolution</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    
+    <!-- Page Specific Scripts -->
+    <script>
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate timeline items on scroll
+            const timelineObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.timeline-content').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-50px)';
+                item.style.transition = 'all 0.6s ease';
+                timelineObserver.observe(item);
+            });
+            
+            // Counter animation for stats
+            const animateValue = (element, start, end, duration) => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    element.textContent = Math.floor(progress * (end - start) + start);
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+            
+            // Smooth reveal for cards
+            const cards = document.querySelectorAll('.interest-card, .requirement-item, .skill-category');
+            const cardObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'all 0.6s ease';
+                cardObserver.observe(card);
+            });
+            
+            // Add hover effect for philosophy card
+            const philosophyCard = document.querySelector('.philosophy-card');
+            if (philosophyCard) {
+                philosophyCard.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                });
+                philosophyCard.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            }
+            
+            // Interactive timeline dots
+            document.querySelectorAll('.timeline-dot').forEach(dot => {
+                dot.addEventListener('click', function() {
+                    const content = this.parentElement.querySelector('.timeline-content');
+                    content.style.transform = 'scale(1.05)';
+                    setTimeout(() => {
+                        content.style.transform = 'scale(1)';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

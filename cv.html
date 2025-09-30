@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV - Mohamed Mokhtar El Mazani - Étudiant en Technologies de l'Informatique">
+    <meta name="keywords" content="CV, informatique, EPHEC, Mohamed El Mazani, développeur, IT">
+    <meta name="author" content="Mohamed Mokhtar El Mazani">
+    
+    <title>CV - Mohamed El Mazani</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Page Specific Styles -->
+    <style>
+        /* CV Layout */
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 120px 2rem 4rem;
+        }
+        
+        .cv-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            padding: 3rem;
+            border-radius: var(--border-radius-xl);
+            color: white;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .cv-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .cv-header-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .cv-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cv-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            animation: fadeInUp 0.6s ease;
+        }
+        
+        .cv-title {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease 0.1s both;
+        }
+        
+        .cv-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            animation: fadeInUp 0.6s ease 0.2s both;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Download Button */
+        .cv-download {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .cv-download:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        /* CV Grid Layout */
+        .cv-content {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 3rem;
+        }
+        
+        /* Sidebar */
+        .cv-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .cv-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            animation: fadeInLeft 0.6s ease both;
+        }
+        
+        .cv-section h2 {
+            font-size: 1.25rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Skills */
+        .skill-category {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-category h3 {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .skill-item {
+            background: var(--light);
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--border-radius);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .skill-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--secondary);
+            background: var(--primary);
+        }
+        
+        /* Language Skills */
+        .language-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .language-level {
+            display: flex;
+            gap: 0.25rem;
+        }
+        
+        .level-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--light);
+            transition: all 0.3s ease;
+        }
+        
+        .level-dot.filled {
+            background: var(--secondary);
+        }
+        
+        /* Main Content */
+        .cv-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .cv-main .cv-section {
+            animation: fadeInRight 0.6s ease both;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.45rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--secondary);
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .timeline-date {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-title {
+            font-size: 1.125rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline-subtitle {
+            color: var(--gray);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-description {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .timeline-description ul {
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+        }
+        
+        .timeline-description li {
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .project-card {
+            background: var(--light);
+            padding: 1.25rem;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--secondary);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        
+        .tech-tag {
+            padding: 0.25rem 0.5rem;
+            background: var(--primary);
+            color: var(--accent);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        /* Interests & Hobbies */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+        
+        .interest-item {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .interest-item:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .interest-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cv-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .cv-header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .cv-photo {
+                margin: 0 auto;
+            }
+            
+            .cv-contact {
+                justify-content: center;
+            }
+            
+            .cv-download {
+                position: static;
+                margin-top: 1rem;
+            }
+        }
+        
+        @media print {
+            .navbar, .cv-download {
+                display: none;
+            }
+            
+            .cv-container {
+                padding-top: 0;
+            }
+            
+            .cv-section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body data-page="cv">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MEM</span>
+                <span class="logo-dot">.</span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="cv.html" class="nav-link active">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projet-pro.html" class="nav-link">Projet Pro</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio-activites.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auto-evaluation.html" class="nav-link">Auto-évaluation</a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- CV Container -->
+    <div class="cv-container">
+        <!-- CV Header -->
+        <header class="cv-header">
+            <a href="assets/documents/cv.pdf" download class="cv-download">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                    <path d="M10 2V14M10 14L6 10M10 14L14 10M3 17H17" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Télécharger PDF
+            </a>
+            
+            <div class="cv-header-content">
+                <div class="cv-photo">
+                    👨‍💻
+                </div>
+                <div class="cv-info">
+                    <h1>Mohamed Mokhtar El Mazani</h1>
+                    <p class="cv-title">Étudiant en Technologies de l'Informatique - BAC 3</p>
+                    <div class="cv-contact">
+                        <span class="contact-item">
+                            📍 Jodoigne (1370)
+                        </span>
+                        <span class="contact-item">
+                            📧 <a href="mailto:mohamedelmazani.pro@gmail.com">mohamedelmazani.pro@gmail.com</a>
+                        </span>
+                        <span class="contact-item">
+                            📱 <a href="tel:+32466332646">0466 33 26 46</a>
+                        </span>
+                        <span class="contact-item">
+                            🚗 Permis B
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- CV Content Grid -->
+        <div class="cv-content">
+            <!-- Sidebar -->
+            <aside class="cv-sidebar">
+                <!-- Compétences Techniques -->
+                <section class="cv-section">
+                    <h2>💻 Compétences Techniques</h2>
+                    
+                    <div class="skill-category">
+                        <h3>Hardware</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Montage & diagnostic PC</div>
+                            <div class="skill-item">Réparation smartphones</div>
+                            <div class="skill-item">Soudure électronique</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Réseaux</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Cisco Packet Tracer</div>
+                            <div class="skill-item">Wireshark</div>
+                            <div class="skill-item">Protocoles TCP/IP</div>
+                            <div class="skill-item">Configuration VLAN</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Développement</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Python (bases)</div>
+                            <div class="skill-item">JavaScript (MERN)</div>
+                            <div class="skill-item">HTML/CSS</div>
+                            <div class="skill-item">MongoDB</div>
+                            <div class="skill-item">Git</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Infrastructure</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Docker</div>
+                            <div class="skill-item">Linux/Windows Server</div>
+                            <div class="skill-item">DNS/DHCP</div>
+                            <div class="skill-item">HTTPS/SSL</div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>IoT & Électronique</h3>
+                        <div class="skill-list">
+                            <div class="skill-item">Raspberry Pi/Pico</div>
+                            <div class="skill-item">Arduino</div>
+                            <div class="skill-item">MQTT</div>
+                            <div class="skill-item">Capteurs</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Langues -->
+                <section class="cv-section">
+                    <h2>🌍 Langues</h2>
+                    
+                    <div class="language-item">
+                        <span>Français</span>
+                        <div class="language-level">
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--gray); margin-top: -0.5rem; margin-bottom: 1rem;">Niveau C1 - Langue maternelle</p>
+                    
+                    <div class="language-item">
+                        <span>Anglais</span>
+                        <div class="language-level">
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot"></span>
+                            <span class="level-dot"></span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--gray); margin-top: -0.5rem; margin-bottom: 1rem;">Niveau B1 - Intermédiaire</p>
+                    
+                    <div class="language-item">
+                        <span>Arabe</span>
+                        <div class="language-level">
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot filled"></span>
+                            <span class="level-dot"></span>
+                            <span class="level-dot"></span>
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--gray); margin-top: -0.5rem;">Dialecte marocain - Parlé</p>
+                </section>
+                
+                <!-- Soft Skills -->
+                <section class="cv-section">
+                    <h2>🤝 Soft Skills</h2>
+                    <div class="skill-list">
+                        <div class="skill-item">Esprit d'équipe</div>
+                        <div class="skill-item">Autonomie</div>
+                        <div class="skill-item">Rigueur & Organisation</div>
+                        <div class="skill-item">Curiosité technique</div>
+                        <div class="skill-item">Gestion du stress</div>
+                        <div class="skill-item">Écoute active</div>
+                        <div class="skill-item">Responsabilité</div>
+                    </div>
+                </section>
+            </aside>
+            
+            <!-- Main Content -->
+            <main class="cv-main">
+                <!-- Formation -->
+                <section class="cv-section">
+                    <h2>🎓 Formation</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 - Aujourd'hui</div>
+                            <div class="timeline-title">Bachelier en Technologies de l'Informatique</div>
+                            <div class="timeline-subtitle">EPHEC - Louvain-la-Neuve</div>
+                            <div class="timeline-description">
+                                Formation complète en informatique couvrant développement, réseaux, sécurité, et gestion de projets.
+                                Actuellement en 3ème année.
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2022</div>
+                            <div class="timeline-title">CESS en Sciences Économiques</div>
+                            <div class="timeline-subtitle">CEPES de Jodoigne</div>
+                            <div class="timeline-description">
+                                Certificat d'enseignement secondaire supérieur avec immersion en anglais.
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Février 2020</div>
+                            <div class="timeline-title">Certificat de langue anglaise</div>
+                            <div class="timeline-subtitle">Broadstairs, Angleterre</div>
+                            <div class="timeline-description">
+                                Séjour linguistique intensif de 2 semaines pour perfectionner l'anglais.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Expériences -->
+                <section class="cv-section">
+                    <h2>💼 Expériences Professionnelles</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2020 - Aujourd'hui</div>
+                            <div class="timeline-title">Assistance Informatique aux Particuliers</div>
+                            <div class="timeline-subtitle">Travailleur indépendant</div>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Montage & installation d'environ 10 PC sur mesure</li>
+                                    <li>Réinstallation Windows & dépannage utilisateurs</li>
+                                    <li>Remplacement SSD/RAM, diagnostic matériel</li>
+                                    <li>Support à distance via Remote Desktop</li>
+                                    <li>Réparation de smartphones (écrans, batteries, ports)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">Juillet 2023</div>
+                            <div class="timeline-title">Technicien de surface</div>
+                            <div class="timeline-subtitle">ISS, Bruxelles - Job étudiant</div>
+                            <div class="timeline-description">
+                                Développement de la rigueur, de l'organisation et du travail en équipe dans un environnement professionnel exigeant.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Projets Académiques -->
+                <section class="cv-section">
+                    <h2>🚀 Projets & Réalisations</h2>
+                    <div class="project-grid">
+                        <div class="project-card">
+                            <h3 class="project-title">VPS Infrastructure</h3>
+                            <p>Mise en place d'un VPS complet avec Docker, DNS public, serveur web HTTPS et service mail.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">DNS</span>
+                                <span class="tech-tag">SSL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <h3 class="project-title">PowerTrack</h3>
+                            <p>Application web pour contrôler une multiprise connectée et suivre la consommation électrique en temps réel.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">MERN Stack</span>
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">MQTT</span>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <h3 class="project-title">PC Gaming Custom</h3>
+                            <p>Assemblage et optimisation de PC gaming haute performance pour des clients, avec overclocking et benchmarking.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Hardware</span>
+                                <span class="tech-tag">Windows</span>
+                                <span class="tech-tag">OC</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Centres d'intérêt -->
+                <section class="cv-section">
+                    <h2>⭐ Centres d'Intérêt</h2>
+                    <div class="interests-grid">
+                        <div class="interest-item">
+                            <div class="interest-icon">🖥️</div>
+                            <div>Hardware PC</div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon">🔒</div>
+                            <div>Cybersécurité</div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon">🎮</div>
+                            <div>Gaming</div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon">📱</div>
+                            <div>Nouvelles Tech</div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon">🏃</div>
+                            <div>Sport</div>
+                        </div>
+                        <div class="interest-item">
+                            <div class="interest-icon">🚗</div>
+                            <div>Automobile</div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Mohamed Mokhtar El Mazani - Portfolio TI EPHEC</p>
+                <p class="footer-note">CV mis à jour en décembre 2024</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    
+    <!-- Page Specific Scripts -->
+    <script>
+        // Animate skills on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateX(0)';
+                        }, index * 50);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            // Animate timeline items
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'all 0.6s ease';
+                observer.observe(item);
+            });
+            
+            // Animate skill items
+            document.querySelectorAll('.skill-item').forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'all 0.4s ease';
+                observer.observe(item);
+            });
+            
+            // Print function
+            window.printCV = function() {
+                window.print();
+            };
+        });
+    </script>
+</body>
+</html>
