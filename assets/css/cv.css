@@ -58,6 +58,7 @@
         
         .cv-title {
             font-size: 1.25rem;
+            color: aqua;
             opacity: 0.95;
             margin-bottom: 1.5rem;
             animation: fadeInUp 0.6s ease 0.1s both;

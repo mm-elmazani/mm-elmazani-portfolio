@@ -11,27 +11,35 @@
   "activities": [
     {
       "id": "act_001",
-      "theme": "Sécurité",
-      "title": "Hackathon Cybersecurity Challenge",
+      "theme": "Électronique et innovation",
+      "title": "Hackathon Électro 2024 – Retour vers le futur",
       "type": "Hackathon",
       "hours": 10,
-      "date": "2024-03-15",
+      "date": "2024-10-25",
       "status": "completed",
       "proof": {
-        "type": "certificate",
-        "description": "Certificat de participation",
-        "file": "cert_cybersec_2024.pdf"
+        "type": "invitation + échanges officiels",
+        "description": "Mails d'invitation, de confirmation et de mention de participation (certificat en attente)",
+        "file": "Hackathon_Electro_2024_proofs.zip"
       },
-      "description": "Participation au hackathon de cybersécurité organisé par l'EPHEC. Résolution de 8 challenges sur 12 en équipe.",
+      "description": "Participation au Hackathon Électro 2024 organisé par l’EPHEC sur le thème « Récupérer de l’ancien pour imaginer et créer des produits modernes ». Événement de 48h combinant créativité, électronique et développement pour concevoir un prototype innovant à partir de matériel récupéré.",
       "reflection": {
-        "context": "J'ai participé au Cybersecurity Challenge organisé par l'EPHEC en mars 2024. Cet événement intensif de 10 heures m'a permis de mettre en pratique mes connaissances en sécurité informatique dans un environnement compétitif.",
-        "facts": "Durant ce hackathon, j'ai travaillé sur plusieurs défis de sécurité : cryptographie (3 challenges), analyse de vulnérabilités web (3 challenges), reverse engineering (1 challenge) et forensics (1 challenge). Notre équipe de 4 personnes a réussi à résoudre 8 challenges sur les 12 proposés, nous classant 5ème sur 20 équipes.",
-        "projectLink": "Cette expérience s'aligne parfaitement avec mon projet professionnel orienté vers l'infrastructure IT sécurisée. La sécurité est un aspect fondamental de l'administration système, domaine dans lequel je souhaite me spécialiser. Les compétences acquises seront directement applicables dans mon futur stage.",
-        "skills": "J'ai renforcé mes compétences techniques en utilisant des outils comme Wireshark pour l'analyse réseau, Burp Suite pour les tests d'intrusion web, et John the Ripper pour le cassage de mots de passe. J'ai également développé ma capacité à travailler efficacement sous pression et à collaborer en équipe pour résoudre des problèmes complexes.",
-        "conclusion": "Ce hackathon m'a fait prendre conscience de l'importance de la veille technologique en cybersécurité. Je compte approfondir mes connaissances en suivant des formations sur les techniques d'exploitation les plus récentes et en pratiquant régulièrement sur des plateformes comme HackTheBox."
+        "context": "J’ai participé au Hackathon Électro 2024 organisé par les professeurs de la section TI de l’EPHEC. Cet événement rassemblait des étudiants de plusieurs années pour relever des défis de conception et de prototypage autour du thème du recyclage électronique et de l’innovation low-tech.",
+        "facts": "Avec mon équipe, nous avons imaginé et développé un prototype fonctionnel à partir de matériel ancien. Le hackathon s’est déroulé sur un week-end complet, avec une réunion préparatoire sur Teams, des phases de brainstorming, de conception et de présentation finale des projets.",
+        "projectLink": "Cette expérience m’a permis d’explorer la création d’objets connectés à faible coût et à faible impact environnemental, en lien direct avec mon intérêt pour l’IoT et le prototypage électronique. Elle a renforcé ma créativité et ma capacité à travailler en équipe dans des délais très courts.",
+        "skills": "J’ai développé des compétences en prototypage électronique, travail collaboratif, gestion du temps, et présentation de projet. J’ai aussi découvert de nouvelles approches d’innovation circulaire et de réutilisation de composants.",
+        "conclusion": "Ce hackathon m’a sensibilisé à la dimension durable de l’innovation technologique. Je compte réinvestir cette approche dans mes futurs projets IoT en intégrant davantage la récupération de composants et le design low-tech."
       },
-      "skills": ["Cybersécurité", "Wireshark", "Burp Suite", "Analyse de vulnérabilités", "Travail d'équipe", "Gestion du stress"]
+      "skills": [
+        "Prototypage électronique",
+        "Travail d'équipe",
+        "Innovation durable",
+        "Créativité",
+        "Gestion du temps",
+        "Communication technique"
+      ]
     },
+
     {
       "id": "act_002",
       "theme": "Hardware",
@@ -91,7 +99,7 @@
         "description": "Photos des circuits réalisés",
         "file": "labo_electronique_2024.jpg"
       },
-      "description": "Session pratique de soudure de composants et création de circuits dans le laboratoire électronique de l'EPHEC.",
+      "description": "Session pratique de soudure de cables dans le laboratoire électronique de l'EPHEC.",
       "reflection": {
         "context": "Dans le cadre du cours d'électronique digitale, j'ai participé à une session de laboratoire de 2 heures focalisée sur la soudure de précision et le prototypage de circuits.",
         "facts": "Durant cette session, j'ai réalisé la soudure de composants CMS sur PCB, créé des connexions propres entre différents modules, et testé les circuits avec multimètre et oscilloscope. Le projet final était un circuit de régulation de tension avec indicateur LED.",
