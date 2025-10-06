@@ -10,11 +10,9 @@ const config = {
     animationDuration: 600,
     scrollOffset: 100,
     observerThreshold: 0.1,
-    adminCode: 'admin',
     storageKeys: {
         theme: 'portfolio_theme',
-        activities: 'portfolio_activities',
-        adminMode: 'portfolio_admin_mode'
+        activities: 'portfolio_activities'
     }
 };
 
@@ -43,7 +41,6 @@ function initializeApp() {
     initializeAnimations();
     initializeScrollEffects();
     initializeLazyLoading();
-    initializeAdminMode();
     
     // Page-specific initializations
     initializePageSpecific();
@@ -267,93 +264,9 @@ function initializeLazyLoading() {
 }
 
 // ========================================
-// 8. ADMIN MODE (Hidden Feature)
+// 8. ADMIN MODE (Hidden Feature) - UPDATE : supprimé
 // ========================================
-function initializeAdminMode() {
-    let keySequence = '';
-    let adminPanel = null;
-    
-    // Listen for admin code
-    document.addEventListener('keypress', (e) => {
-        keySequence += e.key;
-        
-        if (keySequence.includes(config.adminCode)) {
-            toggleAdminMode();
-            keySequence = '';
-        }
-        
-        // Reset sequence if too long
-        if (keySequence.length > 10) {
-            keySequence = '';
-        }
-    });
-    
-    // Check if admin mode was previously activated
-    const adminModeStored = localStorage.getItem(config.storageKeys.adminMode);
-    if (adminModeStored === 'true') {
-        state.isAdminMode = true;
-        showAdminIndicator();
-    }
-}
 
-function toggleAdminMode() {
-    state.isAdminMode = !state.isAdminMode;
-    localStorage.setItem(config.storageKeys.adminMode, state.isAdminMode);
-    
-    if (state.isAdminMode) {
-        console.log('🔓 Admin mode activated');
-        showAdminPanel();
-        showAdminIndicator();
-    } else {
-        console.log('🔒 Admin mode deactivated');
-        hideAdminPanel();
-        hideAdminIndicator();
-    }
-}
-
-function showAdminIndicator() {
-    if (document.getElementById('admin-indicator')) return;
-    
-    const indicator = document.createElement('div');
-    indicator.id = 'admin-indicator';
-    indicator.innerHTML = `
-        <span style="
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            background: var(--warning);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 12px;
-            z-index: 9999;
-            cursor: pointer;
-        ">👨‍💼 Admin Mode</span>
-    `;
-    indicator.onclick = toggleAdminMode;
-    document.body.appendChild(indicator);
-}
-
-function hideAdminIndicator() {
-    const indicator = document.getElementById('admin-indicator');
-    if (indicator) {
-        indicator.remove();
-    }
-}
-
-function showAdminPanel() {
-    // This will be implemented in activities.js
-    if (typeof window.showActivitiesAdmin === 'function') {
-        window.showActivitiesAdmin();
-    }
-}
-
-function hideAdminPanel() {
-    const panel = document.getElementById('admin-panel');
-    if (panel) {
-        panel.remove();
-    }
-}
 
 // ========================================
 // 9. PAGE-SPECIFIC FUNCTIONS
