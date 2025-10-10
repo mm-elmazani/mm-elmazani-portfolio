@@ -48,9 +48,9 @@
     --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
     
     /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-base: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-fast: 0.3s ease;   /* au lieu de 0.15s */
+    --transition-base: 0.6s ease;   /* au lieu de 0.3s */
+    --transition-slow: 1s ease;     /* au lieu de 0.5s */
     
     /* Z-index */
     --z-navbar: 1000;
