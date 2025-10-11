@@ -526,6 +526,34 @@ function transitionToPage(href, addToHistory = true) {
 // ========================================
 // 11. QUICK NAVIGATION
 // ========================================
+
+// OPTION 2 : Indicateur de progression de lecture
+function initProgressIndicator() {
+    const progressBar = document.createElement('div');
+    progressBar.id = 'progress-indicator';
+    progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 100%);
+        z-index: 10000;
+        transition: width 0.3s ease;
+    `;
+    
+    document.body.appendChild(progressBar);
+    
+    window.addEventListener('scroll', () => {
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = (window.scrollY / windowHeight) * 100;
+        progressBar.style.width = scrolled + '%';
+    });
+}
+
+
+
+/*
 function initQuickNav() {
     // Create quick nav button
     const quickNavButton = document.createElement('button');
@@ -568,6 +596,7 @@ function initQuickNav() {
     // Quick nav menu
     quickNavButton.addEventListener('click', showQuickNavMenu);
 }
+*/
 
 function showQuickNavMenu() {
     const existingMenu = document.getElementById('quick-nav-menu');
