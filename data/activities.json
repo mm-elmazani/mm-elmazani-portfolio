@@ -108,34 +108,69 @@
         "conclusion": "Bien que courte, cette expérience m'a ouvert les yeux sur la complexité de l'électronique moderne. Je prévois de poursuivre avec des projets Arduino/Raspberry Pi pour combiner électronique et programmation."
       },
       "skills": ["Soudure CMS", "Lecture de schémas", "Multimètre", "Oscilloscope", "Prototypage", "Précision manuelle"]
+    },
+    {
+      "id": "act_005",
+      "theme": "Communication",
+      "title": "Tech Career Night - AXA Belgium",
+      "type": "Visite entreprise",
+      "hours": 5,
+      "date": "2024-10-10",
+      "status": "completed",
+      "proof": {
+        "type": "badge",
+        "description": "Badge d'accès à l'événement + Photos + Connexions LinkedIn",
+        "file": "axa_tech_night_2024.pdf"
+      },
+      "description": "Participation à la Tech Career Night organisée par AXA Belgium au siège de Bruxelles. Découverte de l'innovation IT, IA, Cloud et transformation digitale dans le secteur de l'assurance.",
+      "reflection": {
+        "context": "Le 10 octobre 2024, j'ai participé à la Tech Career Night organisée par AXA Belgium dans leurs locaux de la Place du Trône à Bruxelles. Cet événement visait à présenter les métiers IT du groupe, leurs innovations technologiques et à créer des opportunités de networking entre étudiants et professionnels du secteur.",
+        "facts": "La soirée s'est articulée autour de trois activités principales. D'abord, le Silent Disco avec deux présentations immersives : l'une sur l'intégration de l'IA chez AXA (SecureGPT, GitHub Copilot, COO Assistant) et l'autre sur la transformation digitale avec le programme CLUP. J'ai découvert leur stack technique moderne : TypeScript, Angular, Java Spring Boot, PostgreSQL, MongoDB et AWS. Ensuite, le Speed Networking m'a permis d'échanger avec quatre professionnels IT : un testeur, un Head of Network, un DevOps Cloud et un Feature Manager. La soirée s'est conclue par un Street Food Dinner propice aux échanges informels avec les RH et autres participants.",
+        "projectLink": "Cet événement s'inscrit parfaitement dans ma recherche de stage en infrastructure IT. La découverte concrète de l'utilisation de l'IA et du Cloud dans une grande entreprise m'a donné une vision claire des compétences recherchées sur le marché. Les contacts établis, notamment avec les RH du département IT, pourront déboucher sur des opportunités de stage. Cette expérience confirme mon intérêt pour les environnements techniques complexes où innovation et sécurité sont primordiales.",
+        "skills": "J'ai développé mes compétences en networking professionnel, apprenant à présenter mon parcours de manière concise lors du speed networking. J'ai approfondi ma compréhension de l'IA appliquée en entreprise, notamment les modèles GPT et leur intégration sécurisée. Ma culture technique s'est enrichie sur les architectures Cloud AWS et les pratiques DevOps. J'ai également amélioré ma capacité à échanger en anglais technique, certaines présentations étant dans cette langue.",
+        "conclusion": "Cette Tech Career Night a dépassé mes attentes en termes d'apprentissage et de networking. Elle m'a permis de comprendre concrètement comment une grande entreprise comme AXA utilise les technologies de pointe tout en maintenant sécurité et conformité. Les connexions LinkedIn établies et les échanges avec les RH ouvrent des perspectives concrètes pour mon stage. Je compte maintenir ces contacts et postuler aux opportunités de stage chez AXA, fort de cette première immersion dans leur culture d'entreprise."
+      },
+      "skills": [
+        "Networking professionnel",
+        "Intelligence Artificielle",
+        "Cloud AWS",
+        "Communication",
+        "Anglais technique",
+        "Culture d'entreprise",
+        "Transformation digitale"
+    ]
     }
+    
   ],
   "statistics": {
-    "currentTotalHours": 25,
-    "remainingHours": 35,
-    "currentThemes": ["Sécurité", "Hardware", "Électronique/IoT"],
-    "themesCount": 3,
-    "activitiesCount": 4,
-    "completionPercentage": 41.67
+    "currentTotalHours": 30,
+    "remainingHours": 30,
+    "currentThemes": ["Sécurité", "Hardware", "Électronique/IoT", "Communication"],
+    "themesCount": 4,
+    "activitiesCount": 5,
+    "completionPercentage": 50
   },
   "validation": {
-    "hoursCheck": "❌ Manque 35 heures",
-    "themesCheck": "❌ Manque 3 thèmes (minimum 6)",
-    "activitiesCheck": "❌ Manque 2 activités (minimum 6)",
+    "hoursCheck": "❌ Manque 30 heures",
+    "themesCheck": "❌ Manque 2 thèmes (minimum 6)",
+    "activitiesCheck": "❌ Manque 1 activité (minimum 6)",
     "themeDistribution": {
       "Sécurité": 10,
       "Hardware": 13,
-      "Électronique/IoT": 2
+      "Électronique/IoT": 2,
+      "Communication": 5
     }
   },
   "suggestions": {
-    "missingThemes": ["Développement", "Réseaux", "Soft Skills", "Langues", "Communication", "Droit IT"],
+    "missingThemes": ["Développement", "Réseaux", "Soft Skills", "Langues", "Droit IT"],
     "recommendedActivities": [
       "Formation en ligne Python/JavaScript (10h)",
       "Configuration réseau VLAN/Routing (8h)",
       "Présentation projet devant classe (5h)",
       "Certification Anglais technique (10h)",
-      "Participation IT Job Day EPHEC (2h)"
+      "Participation IT Job Day EPHEC (2h)",
+      "Stage en entreprise (15h max)",
+      "Projet personnel développement web (10h)"
     ]
   }
 }
