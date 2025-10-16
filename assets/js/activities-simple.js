@@ -156,7 +156,7 @@ function createActivityCard(activity) {
             
             <div class="activity-proof">
                 <strong>Preuve:</strong> ${activity.proof.description}
-                ${activity.proof.file ? `<span class="proof-file">📎 ${activity.proof.file}</span>` : ''}
+                ${activity.proof.file ? `<a href="assets/documents/preuves/${activity.proof.file}" target="_blank">📎 Voir la preuve</a>` : ''}
             </div>
             
             ${activity.skills && activity.skills.length > 0 ? `
