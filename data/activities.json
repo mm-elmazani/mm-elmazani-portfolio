@@ -89,23 +89,23 @@
     {
       "id": "act_004",
       "theme": "Électronique/IoT",
-      "title": "Laboratoire électronique - Soudure et prototypage",
+      "title": "Laboratoire électronique - Restoration des câbles",
       "type": "Autre",
       "hours": 2,
-      "date": "2024-04-05",
+      "date": "2025-04-05",
       "status": "completed",
       "proof": {
         "type": "photos",
         "description": "Photos des circuits réalisés",
-        "file": "labo_electronique_2024.jpg"
+        "file": "labo_electronique_2025.jpeg"
       },
-      "description": "Session pratique de soudure de cables dans le laboratoire électronique de l'EPHEC.",
+      "description": "Session pratique de restoration des câbles le laboratoire électronique de l'EPHEC.",
       "reflection": {
-        "context": "Dans le cadre du cours d'électronique digitale, j'ai participé à une session de laboratoire de 2 heures focalisée sur la soudure de précision et le prototypage de circuits.",
-        "facts": "Durant cette session, j'ai réalisé la soudure de composants CMS sur PCB, créé des connexions propres entre différents modules, et testé les circuits avec multimètre et oscilloscope. Le projet final était un circuit de régulation de tension avec indicateur LED.",
-        "projectLink": "Ces compétences en électronique fondamentale complètent ma formation IT en me donnant une compréhension hardware au niveau le plus bas. Cette connaissance est précieuse pour diagnostiquer des problèmes matériels complexes.",
-        "skills": "J'ai développé ma précision manuelle dans la soudure de composants miniatures, appris à lire et interpréter des schémas électriques, et maîtrisé l'utilisation d'instruments de mesure. La patience et la minutie requises m'ont appris l'importance de la méthode en électronique.",
-        "conclusion": "Bien que courte, cette expérience m'a ouvert les yeux sur la complexité de l'électronique moderne. Je prévois de poursuivre avec des projets Arduino/Raspberry Pi pour combiner électronique et programmation."
+        "context": "(à compléter) mais en gros j'ai aider les profs à restorer les cables du labo" ,
+        "facts": "(à compléter)",
+        "projectLink": "(à compléter)",
+        "skills": "(à compléter)",
+        "conclusion": "(à compléter)"
       },
       "skills": ["Soudure CMS", "Lecture de schémas", "Multimètre", "Oscilloscope", "Prototypage", "Précision manuelle"]
     },
