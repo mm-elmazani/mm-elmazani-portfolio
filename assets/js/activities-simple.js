@@ -156,7 +156,7 @@ function createActivityCard(activity) {
             
             <div class="activity-proof">
                 <strong>Preuve:</strong> ${activity.proof.description}
-                ${activity.proof.file ? `<a href="assets/documents/preuves/${activity.proof.file}" target="_blank">📎 Voir la preuve</a>` : ''}
+                ${activity.proof.file ? `<span class="proof-file">📎 ${activity.proof.file}</span>` : ''}
             </div>
             
             ${activity.skills && activity.skills.length > 0 ? `
@@ -165,43 +165,128 @@ function createActivityCard(activity) {
                 </div>
             ` : ''}
             
-            <button class="btn-expand" onclick="toggleReflection('${activity.id}')">
-                Voir l'analyse réflexive ▼
+            <button class="btn-expand" onclick="openReflectionModal('${activity.id}')">
+                📖 Lire l'analyse réflexive
             </button>
-            
-            <div class="activity-reflection" id="reflection-${activity.id}" style="display: none;">
-                <div class="reflection-content">
-                    <h4>📝 Analyse réflexive</h4>
-                    
-                    <div class="reflection-section">
-                        <h5>Contexte</h5>
-                        <p>${activity.reflection.context}</p>
-                    </div>
-                    
-                    <div class="reflection-section">
-                        <h5>Faits et déroulement</h5>
-                        <p>${activity.reflection.facts}</p>
-                    </div>
-                    
-                    <div class="reflection-section">
-                        <h5>Lien avec le projet professionnel</h5>
-                        <p>${activity.reflection.projectLink}</p>
-                    </div>
-                    
-                    <div class="reflection-section">
-                        <h5>Compétences développées</h5>
-                        <p>${activity.reflection.skills}</p>
-                    </div>
-                    
-                    <div class="reflection-section">
-                        <h5>Conclusion et perspectives</h5>
-                        <p>${activity.reflection.conclusion}</p>
-                    </div>
-                </div>
-            </div>
         </div>
     `;
 }
+
+// 3. NOUVELLE fonction pour ouvrir le modal
+function openReflectionModal(activityId) {
+    const activity = ActivitiesConfig.currentData.activities.find(a => a.id === activityId);
+    if (!activity) return;
+    
+    // Vérifier si le modal existe déjà
+    let modal = document.getElementById('reflection-modal');
+    if (!modal) {
+        // Créer le modal s'il n'existe pas
+        modal = document.createElement('div');
+        modal.id = 'reflection-modal';
+        modal.className = 'reflection-modal';
+        document.body.appendChild(modal);
+        
+        // Ajouter l'événement de fermeture sur clic overlay
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeReflectionModal();
+            }
+        });
+    }
+    
+    // Remplir le contenu du modal
+    modal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeReflectionModal()">×</button>
+                <h2 class="modal-title">${activity.title}</h2>
+                <div class="modal-meta">
+                    <span class="modal-meta-item">🏷️ ${activity.theme}</span>
+                    <span class="modal-meta-item">⏱️ ${activity.hours} heures</span>
+                    <span class="modal-meta-item">📅 ${formatDate(activity.date)}</span>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="reflection-section">
+                    <h3>📍 Contexte</h3>
+                    <p>${activity.reflection.context}</p>
+                </div>
+                
+                <div class="reflection-section">
+                    <h3>📝 Faits et déroulement</h3>
+                    <p>${activity.reflection.facts}</p>
+                </div>
+                
+                <div class="reflection-section">
+                    <h3>🎯 Lien avec le projet professionnel</h3>
+                    <p>${activity.reflection.projectLink}</p>
+                </div>
+                
+                <div class="reflection-section">
+                    <h3>💡 Compétences développées</h3>
+                    <p>${activity.reflection.skills}</p>
+                </div>
+                
+                <div class="reflection-section">
+                    <h3>🔮 Conclusion et perspectives</h3>
+                    <p>${activity.reflection.conclusion}</p>
+                </div>
+                
+                ${activity.skills && activity.skills.length > 0 ? `
+                    <div class="reflection-section">
+                        <h3>🏷️ Tags de compétences</h3>
+                        <div class="modal-skills">
+                            ${activity.skills.map(skill => 
+                                `<span class="modal-skill-tag">${skill}</span>`
+                            ).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>
+            
+            <div class="modal-footer">
+                <div class="modal-proof">
+                    <strong>Preuve :</strong>
+                    ${activity.proof.file ? 
+                        `<a href="assets/documents/preuves/${activity.proof.file}" target="_blank">
+                            📎 ${activity.proof.description}
+                        </a>` : 
+                        `<span>${activity.proof.description}</span>`
+                    }
+                </div>
+                <button onclick="closeReflectionModal()" style="
+                    padding: 0.5rem 1.5rem;
+                    background: var(--accent);
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                ">Fermer</button>
+            </div>
+        </div>
+    `;
+    
+    // Ouvrir le modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Empêcher le scroll du body
+}
+
+// 4. Fonction pour fermer le modal
+function closeReflectionModal() {
+    const modal = document.getElementById('reflection-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Rétablir le scroll
+    }
+}
+
+// 5. Fermer avec ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeReflectionModal();
+    }
+});
 
 // ========================================
 // 6. STATISTIQUES
@@ -386,18 +471,6 @@ function formatDate(dateStr) {
     });
 }
 
-function toggleReflection(activityId) {
-    const reflection = document.getElementById(`reflection-${activityId}`);
-    const button = event.target;
-    
-    if (reflection.style.display === 'none') {
-        reflection.style.display = 'block';
-        button.innerHTML = 'Masquer l\'analyse réflexive ▲';
-    } else {
-        reflection.style.display = 'none';
-        button.innerHTML = 'Voir l\'analyse réflexive ▼';
-    }
-}
 
 function filterActivities() {
     const theme = document.getElementById('filter-theme').value;
@@ -519,7 +592,8 @@ window.ActivitiesManager = {
 // ========================================
 // 12. FONCTIONS GLOBALES (pour onclick)
 // ========================================
-window.toggleReflection = toggleReflection;
+window.openReflectionModal = openReflectionModal;
+window.closeReflectionModal = closeReflectionModal;
 window.filterActivities = filterActivities;
 window.searchActivities = searchActivities;
 window.sortActivities = sortActivities;
