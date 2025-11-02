@@ -40,8 +40,8 @@ function initNavigation() {
     // Page transitions
     initPageTransitions();
     
-    // Quick navigation
-    initQuickNav();
+    // Progress indicator (remplace Quick navigation qui est commentée)
+    initProgressIndicator();
 }
 
 // ========================================
