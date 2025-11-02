@@ -61,12 +61,12 @@
         "skills": "J'ai perfectionné ma dextérité manuelle et ma précision dans la manipulation de composants fragiles. J'ai appris à gérer la relation client, depuis le diagnostic initial jusqu'à la livraison, en passant par la communication sur les délais et les coûts. La gestion des stocks de pièces détachées m'a initié aux problématiques logistiques.",
         "conclusion": "Cette expérience m'a confirmé mon intérêt pour le hardware et m'a donné confiance dans ma capacité à gérer des interventions techniques de manière autonome. Je prévois d'étendre mes compétences aux réparations de laptops et tablettes."
       },
-      "skills": ["Hardware", "Diagnostic", "Micro-soudure", "Relation client", "Précision technique", "Gestion des stocks"]
+      "skills": ["Hardware", "Diagnostic", "Micro-soudure", "Relation client", "Précision technique"]
     },
     {
       "id": "act_003",
       "theme": "Hardware",
-      "title": "Montage PC Gaming haute performance",
+      "title": "Montage PC Gaming sur mesure",
       "type": "Autre",
       "hours": 5,
       "date": "2024-01-20",
@@ -84,7 +84,7 @@
         "skills": "J'ai approfondi mes connaissances sur l'architecture des PC modernes, l'optimisation des performances via BIOS, et la gestion thermique. Le conseil client m'a permis de développer ma capacité à traduire des besoins en solutions techniques. La documentation du processus m'a initié aux bonnes pratiques professionnelles.",
         "conclusion": "Ce projet m'a donné une vision complète du cycle de vie d'un PC, de la conception à la livraison. Je souhaite maintenant me former sur les configurations serveur et workstation pour élargir mon champ de compétences."
       },
-      "skills": ["Assemblage PC", "Overclocking", "Optimisation Windows", "Conseil technique", "Gestion thermique", "Benchmarking"]
+      "skills": ["Assemblage PC", "Optimisation Windows", "Conseil technique", "Gestion thermique", "Benchmarking"]
     },
     {
       "id": "act_004",
@@ -101,13 +101,17 @@
       },
       "description": "Session pratique de restoration des câbles le laboratoire électronique de l'EPHEC.",
       "reflection": {
-        "context": "(à compléter) mais en gros j'ai aider les profs à restorer les cables du labo" ,
-        "facts": "(à compléter)",
-        "projectLink": "(à compléter)",
-        "skills": "(à compléter)",
-        "conclusion": "(à compléter)"
+        "context": "En avril 2025, les professeurs du laboratoire d'électronique de l'EPHEC ont sollicité de l'aide pour restaurer l'ensemble des câbles de test et de connexion du laboratoire. Ces câbles, utilisés intensivement par les étudiants depuis plusieurs années, présentaient des problèmes de connectivité et nécessitaient un diagnostic complet et des réparations.",
+        
+        "facts": "J'ai passé 2 heures à diagnostiquer, réparer et tester plusieurs câbles. Les interventions incluaient : test de continuité au multimètre, identification des câbles défectueux, re-soudure des connexions endommagées.",
+        
+        "projectLink": "Cette activité de maintenance pratique s'inscrit directement dans mes compétences en support technique et hardware. La capacité à diagnostiquer et réparer du matériel de laboratoire est une compétence transférable au support IT en entreprise, où la maintenance préventive et corrective du matériel est essentielle.",
+        
+        "skills": "J'ai développé ma rigueur dans le diagnostic systématique et ma précision en micro-soudure.",
+        
+        "conclusion": "Cette expérience courte mais intense m'a confirmé mon intérêt pour le hardware et le support technique. Elle démontre ma disponibilité à aider et ma polyvalence technique, qualités importantes pour un futur technicien IT."
       },
-      "skills": ["Soudure CMS", "Lecture de schémas", "Multimètre", "Oscilloscope", "Prototypage", "Précision manuelle"]
+      "skills": ["Soudure CMS", "Lecture de schémas", "Multimètre", "Prototypage", "Précision manuelle"]
     },
     {
       "id": "act_005",
@@ -132,26 +136,57 @@
       },
       "skills": [
         "Networking professionnel",
-        "Intelligence Artificielle",
         "Cloud AWS",
         "Communication",
         "Anglais technique",
         "Culture d'entreprise",
         "Transformation digitale"
-    ]
+      ]
+    },
+    {
+      "id": "act_006",
+      "theme": "Développement/Linux",
+      "title": "Hackathon Upscaling 2025 – Media Server Retro",
+      "type": "Hackathon",
+      "hours": 10,
+      "date": "2025-10-24",
+      "status": "completed",
+      "proof": {
+        "type": "photos + invitation",
+        "description": "Photos du projet finalisé (PS2 modifiée en media server RGB) + Email d'invitation officiel",
+        "file": "hackathon_upscaling_2025.pdf"
+      },
+      "description": "Participation au Hackathon Électro Upcycling Challenge 2025 organisé par l'EPHEC et Wallonie Entreprendre sur le thème « Récupérer de l'ancien pour imaginer et créer des produits innovants et fun ». Événement de 48h (24-26 octobre) à Louvain-La-Neuve combinant imagination, électronique et développement pour redonner vie à d'anciens appareils.",
+      "reflection": {
+        "context": "J'ai participé au Hackathon Upscaling 2025 organisé par l'EPHEC et Wallonie Entreprendre les 24-26 octobre 2025 à Louvain-La-Neuve. L'événement rassemblait des équipes pluridisciplinaires avec pour objectif de moderniser d'anciens appareils électroniques en ajoutant de nouvelles fonctionnalités tout en préservant leur esthétique rétro. Notre équipe a choisi de transformer une console PlayStation 2 non fonctionnelle en media server moderne avec éclairage RGB.",
+        "facts": "Le projet s'est déroulé sur 48h intensives. Nous avons récupéré un boîtier de PS2 hors service et conçu un media server autonome en y intégrant un Raspberry Pi 2. Mon rôle principal était l'installation et la configuration du système d'exploitation LibreELEC, suivie de l'installation du service de streaming KODI. J'ai été confronté à plusieurs défis techniques : compatibilité matérielle avec le Raspberry Pi 2 (architecture ARM limitée), optimisation des performances sur ce hardware ancien, configuration du réseau WiFi/Ethernet, et troubleshooting des erreurs de boot et de services. L'équipe a également intégré un système d'éclairage RGB contrôlable pour donner un aspect moderne au boîtier vintage. La présentation finale le dimanche a démontré un media server fonctionnel diffusant du contenu en streaming, le tout dans le châssis iconique de la PS2.",
+        "projectLink": "Ce projet illustre parfaitement l'upcycling technologique et s'inscrit dans mon intérêt pour l'infrastructure IT et l'IoT. La gestion d'un serveur média sur hardware embarqué rejoint mes objectifs de stage en support technique et administration système. Cette expérience m'a permis de travailler sur un projet Linux complet, de la configuration système à la résolution de problèmes complexes, compétences essentielles pour un technicien IT moderne.",
+        "skills": "J'ai développé mes compétences en administration Linux (installation, configuration, services), troubleshooting système (logs, débogage, optimisation), et gestion de projets techniques sous contrainte de temps. Le travail en équipe pluridisciplinaire m'a appris à communiquer efficacement avec des profils différents (électroniciens, designers). La présentation finale a renforcé ma capacité à expliquer des concepts techniques à un public non-expert. Enfin, la contrainte du hardware limité (Raspberry Pi 2) m'a forcé à optimiser chaque ressource, compétence précieuse en administration système.",
+        "conclusion": "Ce hackathon m'a prouvé que l'innovation ne nécessite pas toujours du matériel neuf et coûteux. L'upcycling technologique combine créativité, compétences techniques et conscience écologique. Je compte réutiliser ces compétences Linux et serveur dans mes futurs projets personnels, notamment pour créer un homelab avec du matériel récupéré. Cette expérience renforce ma candidature pour des stages en infrastructure IT, car elle démontre ma capacité à gérer des systèmes Linux et à résoudre des problèmes complexes de manière autonome."
+      },
+      "skills": [
+        "Administration Linux",
+        "Configuration serveur média",
+        "Troubleshooting système",
+        "Raspberry Pi",
+        "Travail d'équipe",
+        "Gestion du temps",
+        "Présentation technique",
+        "Optimisation performance"
+      ]
     }
     
   ],
   "statistics": {
-    "currentTotalHours": 30,
-    "remainingHours": 30,
+    "currentTotalHours": 40,
+    "remainingHours": 20,
     "currentThemes": ["Sécurité", "Hardware", "Électronique/IoT", "Communication"],
     "themesCount": 4,
-    "activitiesCount": 5,
-    "completionPercentage": 50
+    "activitiesCount": 6,
+    "completionPercentage": 66 
   },
   "validation": {
-    "hoursCheck": "❌ Manque 30 heures",
+    "hoursCheck": "❌ Manque 20 heures",
     "themesCheck": "❌ Manque 2 thèmes (minimum 6)",
     "activitiesCheck": "❌ Manque 1 activité (minimum 6)",
     "themeDistribution": {
@@ -161,6 +196,7 @@
       "Communication": 5
     }
   },
+  
   "suggestions": {
     "missingThemes": ["Développement", "Réseaux", "Soft Skills", "Langues", "Droit IT"],
     "recommendedActivities": [

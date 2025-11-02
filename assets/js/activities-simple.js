@@ -24,11 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initActivitiesFromJSON() {
     try {
-        // Charger les données initiales
+        // Charger les données initiales (initializeUI() sera appelé dans loadActivitiesData())
         await loadActivitiesData();
-        
-        // Initialiser les composants UI
-        initializeUI();
         
         // Activer le rafraîchissement automatique si nécessaire
         if (ActivitiesConfig.enableAutoRefresh) {
@@ -70,6 +67,9 @@ async function loadActivitiesData() {
         updateStatistics(data.statistics);
         updateValidation(data.validation);
         displaySuggestions(data.suggestions);
+        
+        // ✅ Initialiser les filtres APRÈS que les données soient chargées
+        initializeUI();
         
         return data;
         
