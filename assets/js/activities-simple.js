@@ -62,8 +62,9 @@ async function loadActivitiesData() {
         console.log(`✅ ${data.activities.length} activités chargées`);
         console.log(`📊 Total: ${data.statistics.currentTotalHours}h / 60h (${data.statistics.completionPercentage}%)`);
         
-        // Afficher les données
-        displayActivities(data.activities);
+        // Afficher les données (triées par défaut par date décroissante)
+        const sortedActivities = [...data.activities].sort((a, b) => new Date(b.date) - new Date(a.date));
+        displayActivities(sortedActivities);
         updateStatistics(data.statistics);
         updateValidation(data.validation);
         displaySuggestions(data.suggestions);
@@ -115,7 +116,8 @@ function displayActivities(activities) {
         return;
     }
     
-    activities.sort((a, b) => new Date(b.date) - new Date(a.date));
+    // ⚠️ NE PLUS trier ici - on affiche dans l'ordre reçu
+    // Le tri est géré par les fonctions sortActivities() et filterActivities()
     
     container.innerHTML = activities.map(activity => createActivityCard(activity)).join('');
     
@@ -501,6 +503,13 @@ function searchActivities(query) {
 }
 
 function sortActivities(sortBy) {
+    console.log('🔄 Tri demandé:', sortBy);
+    
+    if (!ActivitiesConfig.currentData || !ActivitiesConfig.currentData.activities) {
+        console.error('❌ Pas de données disponibles pour le tri');
+        return;
+    }
+    
     let sorted = [...ActivitiesConfig.currentData.activities];
     
     switch(sortBy) {
@@ -519,8 +528,11 @@ function sortActivities(sortBy) {
         case 'theme':
             sorted.sort((a, b) => a.theme.localeCompare(b.theme));
             break;
+        default:
+            console.warn('⚠️ Type de tri inconnu:', sortBy);
     }
     
+    console.log('✅ Activités triées:', sorted.length);
     displayActivities(sorted);
 }
 
@@ -585,8 +597,7 @@ function showError(message) {
 window.ActivitiesManager = {
     loadData: loadActivitiesData,
     refresh: checkForUpdates,
-    getData: () => ActivitiesConfig.currentData,
-    toggleReflection: toggleReflection
+    getData: () => ActivitiesConfig.currentData
 };
 
 // ========================================
