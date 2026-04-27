@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette Swiss-Tech Éditorial — variante claire */
+  --color-bone: #f5f5f3;        /* fond principal */
+  --color-mist: #deeef4;         /* surface douce (cyan très clair) */
+  --color-frost: #c6e7f5;        /* surface élevée (cyan clair) */
+  --color-sky: #97d9f6;          /* highlight / hover (cyan moyen) */
+  --color-ash: #a1a1aa;          /* texte secondaire / iron */
+  --color-ink: #0b0b0c;          /* texte primaire */
+  --color-deep: #082f49;         /* foncé cyan profond (sky-950) — accents sombres */
+  --color-rule: rgba(11, 11, 12, 0.1);
+
+  /* Accent */
+  --color-accent: #38bdf8;
+  --color-accent-soft: rgba(56, 189, 248, 0.15);
+
+  /* Typographies */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+
+  /* Container max-width (cf. design system : 1440px) */
+  --breakpoint-container: 1440px;
+}
+
+/* Reset/base */
+html {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bone);
+}

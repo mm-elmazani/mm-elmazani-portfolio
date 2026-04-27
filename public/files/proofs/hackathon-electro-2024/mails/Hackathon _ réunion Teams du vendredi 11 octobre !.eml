@@ -1,0 +1,394 @@
+Received: from PAXPR05MB9663.eurprd05.prod.outlook.com (2603:10a6:102:242::22)
+ by AM8PR05MB8002.eurprd05.prod.outlook.com with HTTPS; Tue, 8 Oct 2024
+ 13:48:20 +0000
+Received: from AM9PR05MB8546.eurprd05.prod.outlook.com (2603:10a6:20b:3a4::6)
+ by PAXPR05MB9663.eurprd05.prod.outlook.com (2603:10a6:102:242::22) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.7982.27; Tue, 8 Oct
+ 2024 13:48:17 +0000
+Received: from AM9PR05MB8546.eurprd05.prod.outlook.com
+ ([fe80::328b:7cc9:791c:164]) by AM9PR05MB8546.eurprd05.prod.outlook.com
+ ([fe80::328b:7cc9:791c:164%6]) with mapi id 15.20.7982.033; Tue, 8 Oct 2024
+ 13:48:11 +0000
+From: VAN DORMAEL Louis <l.vandormael@ephec.be>
+To: ACHOUR Idriss <i.achour@students.ephec.be>, AFKIR Mohamed Amin
+	<moh.afkir@students.ephec.be>, BEN MESSAOUD Achraf
+	<a.benmessaoud@students.ephec.be>, BOUALI Daniel
+	<d.bouali@students.ephec.be>, BOUCHIHA Imad <i.bouchiha@students.ephec.be>,
+	CALLENS Amaury <a.callens@students.ephec.be>, CHAHIDI Yassin
+	<y.chahidi@students.ephec.be>, CORDIER Mathis <m.cordier@students.ephec.be>,
+	=?iso-8859-1?Q?DULI=C8RE_Lo=EFc?= <l.duliere@students.ephec.be>, SERIFI
+ AYEMAMOUNI Ayman <a.serifiayemamouni@students.ephec.be>, TAHIRI Anas
+	<an.tahiri@students.ephec.be>, EL HALLABI Marwa
+	<m.elhallabi@students.ephec.be>, LAKBIACH Kawtar
+	<k.lakbiach@students.ephec.be>, BAJAJ Komal <k.bajaj@students.ephec.be>,
+	BAKOUYAN Marina <m.bakouyan@students.ephec.be>, BOUDCHICHE Achraf
+	<a.boudchiche@students.ephec.be>, FLAMENT Dorian
+	<d.flament@students.ephec.be>, AIT ALI Salah <s.aitali@students.ephec.be>,
+	ASLAN Fatih <f.aslan@students.ephec.be>, BELKOUNANI Imad
+	<im.belkounani@students.ephec.be>, ELKHAIARI Zakaria
+	<z.elkhaiari@students.ephec.be>, GUTMANSKI Krystian
+	<k.gutmanski@students.ephec.be>, HADJADJ Alexis
+	<a.hadjadj@students.ephec.be>, HAKIM Ahmad <a.hakim@students.ephec.be>,
+	KHELFAOUI Zaid <z.khelfaoui@students.ephec.be>, PENAY Thibault
+	<t.penay@students.ephec.be>, POGHOSYAN Narek <n.poghosyan@students.ephec.be>,
+	ZEMOURI Adam <a.zemouri@students.ephec.be>, DENUIT Robin
+	<r.denuit@students.ephec.be>, FRERIE Noah <n.frerie@students.ephec.be>,
+	JACOBS de MORANT Victor <v.jacobsdemorant@students.ephec.be>, JOCHMANS Sacha
+	<s.jochmans@students.ephec.be>, LEMAIRE Nathan <n.lemaire@students.ephec.be>,
+	CLAREMBAUX Robin <r.clarembaux@students.ephec.be>, ROBERT Charles
+	<ch.robert@students.ephec.be>, BENZAKOUR Ilian
+	<i.benzakour@students.ephec.be>, MERTENS Corentin
+	<c.mertens@students.ephec.be>, WASIQ Yassa <y.wasiq@students.ephec.be>,
+	HAUSMAN Pierre-Alexandre <p.hausman@students.ephec.be>, HOEDENAEKEN Nicolas
+	<n.hoedenaeken@students.ephec.be>, DEVIS Xavier <x.devis@students.ephec.be>,
+	=?iso-8859-1?Q?CHARLIER_Alo=EFs?= <a.charlier@students.ephec.be>,
+	=?iso-8859-1?Q?PR=C9AT_Thomas?= <t.preat@students.ephec.be>, DELCROIX Brice
+	<b.delcroix@students.ephec.be>, HUYBRECHTS Louis
+	<l.huybrechts@students.ephec.be>, ROQUET Arnaud <a.roquet@students.ephec.be>,
+	SABACEAG Denis <d.sabaceag@students.ephec.be>, VALCKE Tristan
+	<t.valcke@students.ephec.be>, GAY Edward <e.gay@students.ephec.be>, GIRBOUX
+ Thomas <t.girboux@students.ephec.be>, CIAMALA KOMBE Greg
+	<g.ciamalakombe@students.ephec.be>, =?iso-8859-1?Q?LEF=C8VRE_Pierre-Louis?=
+	<p.lefevre@students.ephec.be>, =?iso-8859-1?Q?MON=C9_CANADELL_Fabian?=
+	<f.monecanadell@students.ephec.be>, =?iso-8859-1?Q?HERTMANS_Math=E9o?=
+	<m.hertmans@students.ephec.be>, EL MAZANI Mohamed Mokhtar
+	<m.elmazani@students.ephec.be>, BEN LHAJ Rayane
+	<r.benlhaj@students.ephec.be>, STEVANT William <w.stevant@students.ephec.be>,
+	AZARUAL Redouane <r.azarual@students.ephec.be>, JOUAD Mehdi
+	<m.jouad@students.ephec.be>, IMAHDA Hatim <h.imahda@students.ephec.be>,
+	VANDERMEULEN Arnaud <a.vandermeulen@students.ephec.be>, DELCORTE Maxime
+	<m.delcorte@students.ephec.be>, LAROY Alex <a.laroy@students.ephec.be>
+CC: DE SMET Dimitri <d.desmet@ephec.be>, DUBRUILLE Xavier
+	<x.dubruille@ephec.be>
+Subject: =?iso-8859-1?Q?Hackathon_:_r=E9union_Teams_du_vendredi_11_octobre_!?=
+Thread-Topic:
+	=?iso-8859-1?Q?Hackathon_:_r=E9union_Teams_du_vendredi_11_octobre_!?=
+Thread-Index: AdsZiDraJzAX19gvSDyy2Nd0nbVGWg==
+Date: Tue, 8 Oct 2024 13:48:10 +0000
+Message-ID:
+	<AM9PR05MB85468C1A58CCCB7C71DAAA6BEF7E2@AM9PR05MB8546.eurprd05.prod.outlook.com>
+Accept-Language: fr-FR, en-US
+Content-Language: fr-FR
+X-MS-Exchange-Organization-AuthAs: Internal
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: AM9PR05MB8546.eurprd05.prod.outlook.com
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-Network-Message-Id:
+	c8f6a596-8a81-4232-6ecd-08dce79fd924
+X-MS-Exchange-Organization-SCL: 1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+x-ms-publictraffictype: Email
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506478)(944626604)(920097)(425001)(930097)(140003);
+X-Microsoft-Antispam-Message-Info:
+	vGyeBon0Vn8igXIYXHyf+1Fj1yyvpbvtYg/lnz0EvchwOKkBPx2RQUK3MqDoPP5DjyaOTwrc1iFGuBCWuFdqxthLyqAGFp4PYvrPrXTghzMVKAeWdY/EOxYXwYcCssBB+RQSpz6bPgj2QAOg/0dc3y6BJos8NxZdFmaXqSfAXeN3VTQDKOlbkXs4Rn7ixUQitMXLuSz1ftujUNGDsxkvAzwVZ5oufhU8l0joSLj16iRDdGm2ZowalytBCpx41c21bi7dAPAbDZrj7oMgGEw1WR7wylQbo6P+sDL727KQ2dK04vb+7QQTC12ZDXtyL8bFrDkCsH/8paQBDhsv5UCIaG/tz0Jf9KYXni1EgwNfO04CFNXpLws8lppV/JOYrgLGYDIzJ/p+iBKpisjTgO3p4FxMe/A8XJFmTKaIZ/XDslvsLqRjAcfw9ALOI9u9/y5iHORyV2qqebkfKdKO3eeps6sMcn+mS2jVXiJs/MwHVFX1txTmfagsqr8CTkwR/FErI2C12y7saDDvxvXAqRT3RfIlFEl2OdPI58G6h1BLQWQ0kbpnpyoG3TCV87uusbAHWZxMoj7cXuQLGr/GlMrrsTlqrSFg08U0hK6//Vej0K+zfKh3vEaiwex8bniZjSGcXFQ6XCXRP46rwkKRofl5ED+LTI1Kk7o+ka7Cpb+TvFTu0eVYAGSBuVUPPxb+rM2z7vlue1bDCrMElF2+Au7b7rSwOUbSzI/hCYWKdMtYMDSOo4yZBjU5HCWaroOfUCmVC7JoO0cmoz8CsKPHSjWTbdUF8w2CYolHmt2L8vFg3emAp/AeDp9ragD1W7yI+eAUDZzBwI3ym5FlefwHpMOi8BWL3HDZS5xzebbQJzfoc10=
+Content-Type: multipart/alternative;
+	boundary="_000_AM9PR05MB85468C1A58CCCB7C71DAAA6BEF7E2AM9PR05MB8546eurp_"
+MIME-Version: 1.0
+
+--_000_AM9PR05MB85468C1A58CCCB7C71DAAA6BEF7E2AM9PR05MB8546eurp_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Bonjour =E0 tous !
+
+Merci de vous =EAtre inscrits au Hackathon Electro 2024, nous avons h=E2te =
+de vous rencontrer, puis de d=E9couvrir vos r=E9alisations !
+
+Pour lancer ce Hackathon, vous =EAtes attendus =E0 une courte r=E9union en =
+distanciel via Teams. C'est importation d'=EAtre l=E0 pour bien lancer l'=
+=E9v=E8nement.
+
+https://teams.microsoft.com/l/meetup-join/19%3ajZZJ1hX7bOusuTT3KB3MKKcjBkaI=
+VvSnYz-Y3R8xxvo1%40thread.tacv2/1728393307586?context=3D%7b%22Tid%22%3a%222=
+1936fc0-be19-4e1b-ad89-4def5c23b4cb%22%2c%22Oid%22%3a%227942845f-864c-4336-=
+af84-d3e986799c95%22%7d
+
+Merci donc d'y participer ce vendredi 11 octobre =E0 17h15.
+
+L'objectif est de rapidement :
+
+  *   Se rencontrer
+  *   Vous expliquer le principe du Hackathon de du d=E9roulement
+  *   Vous lancer dans la recherche d'id=E9es
+  *   Vous inviter =E0 une brocante pour aller ensemble r=E9cup=E9rer du ma=
+t=E9riel utile
+
+Si vous avez la moindre question, ne pas h=E9siter =E0 venir les poser dans=
+ Teams !
+Hackathon Electro 2024 | Questions bienvenues ! | Microsoft Teams<https://t=
+eams.microsoft.com/l/channel/19%3Afad50fda9f2343708781d5c2747c8a0c%40thread=
+.tacv2/Questions%20bienvenues%20!?groupId=3D2f0f1be8-da4d-4761-9f2a-6520ab2=
+d4cd2&tenantId=3D21936fc0-be19-4e1b-ad89-4def5c23b4cb>
+
+A vendredi !
+
+L'=E9quipe Hackathon
+
+--_000_AM9PR05MB85468C1A58CCCB7C71DAAA6BEF7E2AM9PR05MB8546eurp_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:#954F72;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 70.85pt 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:1690449318;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-450072664 135004161 135004163 135004165 135004161 1=
+35004163 135004165 135004161 135004163 135004165;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:2147232573;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-491778950 256173332 135004163 135004165 135004161 1=
+35004163 135004165 135004161 135004163 135004165;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"FR-BE" link=3D"#0563C1" vlink=3D"#954F72">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Bonjour =E0 tous !<o:p></o:p></p>
+<p class=3D"MsoNormal"><br>
+Merci de vous =EAtre inscrits au Hackathon Electro 2024, nous avons h=E2te =
+de vous rencontrer, puis de d=E9couvrir vos r=E9alisations&nbsp;!<br>
+<br>
+<o:p></o:p></p>
+<p class=3D"MsoNormal">Pour lancer ce Hackathon, vous =EAtes attendus =E0 u=
+ne courte r=E9union en distanciel via Teams. C&#8217;est importation d&#821=
+7;=EAtre l=E0 pour bien lancer l&#8217;=E9v=E8nement.<br>
+<br>
+<o:p></o:p></p>
+<p class=3D"MsoNormal"><a href=3D"https://teams.microsoft.com/l/meetup-join=
+/19%3ajZZJ1hX7bOusuTT3KB3MKKcjBkaIVvSnYz-Y3R8xxvo1%40thread.tacv2/172839330=
+7586?context=3D%7b%22Tid%22%3a%2221936fc0-be19-4e1b-ad89-4def5c23b4cb%22%2c=
+%22Oid%22%3a%227942845f-864c-4336-af84-d3e986799c95%22%7d">https://teams.mi=
+crosoft.com/l/meetup-join/19%3ajZZJ1hX7bOusuTT3KB3MKKcjBkaIVvSnYz-Y3R8xxvo1=
+%40thread.tacv2/1728393307586?context=3D%7b%22Tid%22%3a%2221936fc0-be19-4e1=
+b-ad89-4def5c23b4cb%22%2c%22Oid%22%3a%227942845f-864c-4336-af84-d3e986799c9=
+5%22%7d</a><o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Merci donc d&#8217;y participer ce v<b>endredi 11 </=
+b>octobre =E0 <b>
+17h15</b>.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">L'objectif est de rapidement :<o:p></o:p></p>
+<ul style=3D"margin-top:0cm" type=3D"disc">
+<li class=3D"MsoListParagraph" style=3D"margin-left:0cm;mso-list:l1 level1 =
+lfo2">Se rencontrer<o:p></o:p></li><li class=3D"MsoListParagraph" style=3D"=
+margin-left:0cm;mso-list:l1 level1 lfo2">Vous expliquer le principe du Hack=
+athon de du d=E9roulement<o:p></o:p></li><li class=3D"MsoListParagraph" sty=
+le=3D"margin-left:0cm;mso-list:l1 level1 lfo2">Vous lancer dans la recherch=
+e d'id=E9es<o:p></o:p></li><li class=3D"MsoListParagraph" style=3D"margin-l=
+eft:0cm;mso-list:l1 level1 lfo2">Vous inviter =E0 une brocante pour aller e=
+nsemble r=E9cup=E9rer du mat=E9riel utile<o:p></o:p></li></ul>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Si vous avez la moindre question, ne pas h=E9siter =
+=E0 venir les poser dans Teams !<br>
+<a href=3D"https://teams.microsoft.com/l/channel/19%3Afad50fda9f2343708781d=
+5c2747c8a0c%40thread.tacv2/Questions%20bienvenues%20!?groupId=3D2f0f1be8-da=
+4d-4761-9f2a-6520ab2d4cd2&amp;tenantId=3D21936fc0-be19-4e1b-ad89-4def5c23b4=
+cb">Hackathon Electro 2024 | Questions bienvenues
+ ! | Microsoft Teams</a><o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">A vendredi !<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">L'=E9quipe Hackathon<o:p></o:p></p>
+</div>
+</body>
+</html>
+
+--_000_AM9PR05MB85468C1A58CCCB7C71DAAA6BEF7E2AM9PR05MB8546eurp_--
