@@ -1,52 +1,19 @@
-# Portfolio v2 — Mohamed Mokhtar El Mazani
+# Portfolio — Mohamed Mokhtar El Mazani
 
-Portfolio académique BAC 3 Technologie de l'Informatique — EPHEC Louvain-la-Neuve.
+Portfolio académique développé dans le cadre du BAC 3 Technologie de l'Informatique à l'EPHEC (Louvain-la-Neuve), promotion 2025-2026.
+
+Il documente mon parcours, mes compétences et mes activités parascolaires selon le référentiel de compétences du programme.
+
+## Contenu
+
+**5 pages :**
+
+- **Landing** — présentation et contact
+- **CV** — formation, expériences (dont stage VoIP — Administration communale d'Ottignies-LLN) et compétences
+- **Projet professionnel** — trajectoire, certifications visées (CompTIA A+, LPIC-1, Security+) et vision
+- **Portfolio d'activités** — 11 activités parascolaires · 9 thèmes · 74h valorisées · preuves incluses
+- **Auto-évaluation** — réflexion sur mes compétences, lacunes et plan d'action
 
 ## Stack
 
-- **Next.js 16** (App Router, standalone output)
-- **Tailwind CSS v4** (config via `@theme` dans `globals.css`)
-- **TypeScript**
-
-## Structure
-
-```
-src/
-├── app/
-│   ├── page.tsx               # Landing
-│   ├── cv/page.tsx            # Curriculum Vitae
-│   ├── projet-pro/page.tsx    # Projet professionnel
-│   ├── portfolio/             # Portfolio d'activités (11 activités)
-│   │   ├── page.tsx
-│   │   └── [slug]/page.tsx
-│   └── auto-evaluation/page.tsx
-├── components/
-│   ├── NavBar.tsx
-│   └── Footer.tsx
-└── data/
-    └── activities.ts          # Source de vérité des 11 activités
-public/
-└── files/
-    ├── cv-mohamed-elmazani.pdf
-    └── proofs/                # Preuves par activité
-```
-
-## Développement
-
-```bash
-npm install
-npm run dev
-```
-
-Ouvre [http://localhost:3000](http://localhost:3000).
-
-## Build production
-
-```bash
-npm run build
-npm start
-```
-
-## Déploiement
-
-Self-hosted sur homelab — Dockerfile + Caddy (reverse proxy).
+Next.js 16 · Tailwind CSS v4 · TypeScript — self-hosted sur homelab personnel.
