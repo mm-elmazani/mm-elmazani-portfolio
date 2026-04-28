@@ -97,7 +97,7 @@ const skills: { group: string; items: string[] }[] = [
 const languages = [
   { lang: "Français", level: 5, note: "C2 · langue maternelle" },
   { lang: "Anglais", level: 4, note: "B2 · intermédiaire avancé" },
-  { lang: "Arabe", level: 3, note: "Dialecte marocain · parlé" },
+  { lang: "Arabe", level: 3, note: "Darija · dialecte marocain · parlé" },
 ];
 
 const softSkills = [
