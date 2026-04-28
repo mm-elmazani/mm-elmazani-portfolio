@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "node -e \"const fs=require('fs'),p=require('path');for(const d of ['.next/static','public']){const dst=p.join('.next/standalone',d==='.next/static'?'.next/static':'public');if(fs.existsSync(d)){fs.cpSync(d,dst,{recursive:true});console.log('copied',d,'->',dst)}}\"",
     "start": "next start",
+    "start:standalone": "node .next/standalone/server.js",
     "lint": "eslint"
   },
   "dependencies": {
