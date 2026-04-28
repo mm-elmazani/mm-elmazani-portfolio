@@ -29,20 +29,20 @@ const hubLinks = [
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-[1440px] px-6 py-16 md:px-12 md:py-24">
+    <main className="mx-auto max-w-[1440px] px-5 py-14 md:px-12 md:py-24">
       {/* Éyebrow */}
       <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ash">
         Portfolio · EPHEC BAC 3 TI · 2025 — 2026
       </p>
 
       {/* Hero */}
-      <h1 className="mt-6 font-display text-5xl font-medium leading-[0.95] md:text-7xl lg:text-8xl">
+      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl lg:text-8xl">
         Mohamed Mokhtar
         <br />
         El Mazani<span className="text-accent">.</span>
       </h1>
 
-      <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/80 md:text-xl">
+      <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-xl">
         Étudiant BAC 3 en Technologies de l&apos;Informatique à l&apos;EPHEC.
         Curieux et autodidacte, je navigue naturellement entre le{" "}
         <span className="text-ink">hardware</span>, les{" "}

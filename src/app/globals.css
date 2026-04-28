@@ -9,7 +9,7 @@
   --color-ash: #a1a1aa;          /* texte secondaire / iron */
   --color-ink: #0b0b0c;          /* texte primaire */
   --color-deep: #082f49;         /* foncé cyan profond (sky-950) — accents sombres */
-  --color-rule: rgba(11, 11, 12, 0.1);
+  --color-rule: rgba(11, 11, 12, 0.18);
 
   /* Accent */
   --color-accent: #38bdf8;

@@ -148,7 +148,7 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <section className="border border-rule bg-bone p-6 md:p-8">
+    <section className="border border-rule bg-mist p-6 md:p-8">
       <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
         [{num}] {title}
       </h2>
@@ -199,7 +199,7 @@ function TimelineBlock({ items }: { items: TimelineItem[] }) {
 
 export default function CVPage() {
   return (
-    <main className="mx-auto max-w-[1440px] px-6 py-16 md:px-12 md:py-24">
+    <main className="mx-auto max-w-[1440px] px-5 py-14 md:px-12 md:py-24">
       {/* Éyebrow + hero */}
       <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ash">
         [01] CV · mis à jour avril 2026
@@ -207,7 +207,7 @@ export default function CVPage() {
 
       <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
         <div>
-          <h1 className="font-display text-5xl font-medium leading-[0.95] md:text-7xl">
+          <h1 className="font-display text-4xl font-medium leading-[0.95] md:text-7xl">
             Mohamed Mokhtar
             <br />
             El Mazani<span className="text-accent">.</span>

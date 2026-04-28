@@ -43,7 +43,7 @@ export default async function ActivityDetailPage({
   const next = idx < activities.length - 1 ? activities[idx + 1] : null;
 
   return (
-    <main className="mx-auto max-w-[1100px] px-6 py-16 md:px-12 md:py-24">
+    <main className="mx-auto max-w-[1100px] px-5 py-14 md:px-12 md:py-24">
       {/* Breadcrumb */}
       <nav className="font-mono text-[11px] uppercase tracking-[0.2em] text-ash">
         <Link
@@ -63,7 +63,7 @@ export default async function ActivityDetailPage({
         {a.title}
       </h1>
 
-      <p className="mt-6 max-w-3xl text-lg leading-relaxed text-ink/80">
+      <p className="mt-6 max-w-3xl text-base leading-relaxed text-ink/80 md:text-lg">
         {a.description}
       </p>
 
@@ -199,12 +199,12 @@ export default async function ActivityDetailPage({
             </p>
             <ul className="mt-4 grid gap-px border border-rule bg-rule sm:grid-cols-2">
               {a.proof.links.map((l, i) => (
-                <li key={l.url} className="bg-bone">
+                <li key={l.url} className="bg-mist">
                   <a
                     href={l.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between gap-4 p-4 transition-colors hover:bg-mist"
+                    className="group flex items-center justify-between gap-4 p-4 transition-colors hover:bg-frost"
                   >
                     <div className="flex min-w-0 items-baseline gap-3">
                       <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-accent">
@@ -265,12 +265,12 @@ export default async function ActivityDetailPage({
         {prev ? (
           <NavCard activity={prev} direction="prev" />
         ) : (
-          <div className="bg-bone p-6" />
+          <div className="bg-mist p-6" />
         )}
         {next ? (
           <NavCard activity={next} direction="next" />
         ) : (
-          <div className="bg-bone p-6" />
+          <div className="bg-mist p-6" />
         )}
       </nav>
     </main>
@@ -291,7 +291,7 @@ function Meta({
   muted?: boolean;
 }) {
   return (
-    <div className="flex flex-col gap-2 bg-bone p-5">
+    <div className="flex flex-col gap-2 bg-mist p-5">
       <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
         {label}
       </p>
@@ -342,7 +342,7 @@ function NavCard({
   return (
     <Link
       href={`/portfolio/${activity.slug}`}
-      className={`group flex flex-col gap-2 bg-bone p-6 transition-colors hover:bg-mist ${
+      className={`group flex flex-col gap-2 bg-mist p-6 transition-colors hover:bg-frost ${
         direction === "next" ? "md:items-end md:text-right" : ""
       }`}
     >

@@ -21,19 +21,19 @@ export default function PortfolioPage() {
   const sorted = [...activities].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <main className="mx-auto max-w-[1440px] px-6 py-16 md:px-12 md:py-24">
+    <main className="mx-auto max-w-[1440px] px-5 py-14 md:px-12 md:py-24">
       {/* Éyebrow + hero */}
       <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ash">
         [03] Portfolio · activités d&apos;acquisition de compétences
       </p>
 
-      <h1 className="mt-6 font-display text-5xl font-medium leading-[0.95] md:text-7xl">
+      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
         Apprendre
         <br />
         en faisant<span className="text-accent">.</span>
       </h1>
 
-      <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/80">
+      <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         Activités menées hors cursus pour acquérir des compétences techniques,
         humaines et professionnelles. Chacune est documentée avec une analyse
         réflexive et une preuve, conformément aux modalités du portfolio EPHEC.
@@ -202,12 +202,12 @@ export default function PortfolioPage() {
                   </p>
                 </header>
 
-                <div className="mt-6 grid gap-px bg-rule md:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-6 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
                   {items.map((a) => (
                     <Link
                       key={a.id}
                       href={`/portfolio/${a.slug}`}
-                      className="group flex h-full flex-col bg-bone p-6 transition-colors hover:bg-mist"
+                      className="group flex h-full flex-col bg-mist p-6 transition-colors hover:bg-frost"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
@@ -250,7 +250,7 @@ function Counter({
   suffix?: string;
 }) {
   return (
-    <div className="flex flex-col justify-between bg-bone p-5">
+    <div className="flex flex-col justify-between bg-mist p-5">
       <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
         {label}
       </p>

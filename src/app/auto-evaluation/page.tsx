@@ -117,19 +117,19 @@ function ReflectionBlock({
 
 export default function AutoEvaluationPage() {
   return (
-    <main className="mx-auto max-w-[1100px] px-6 py-16 md:px-12 md:py-24">
+    <main className="mx-auto max-w-[1100px] px-5 py-14 md:px-12 md:py-24">
       {/* Éyebrow + hero */}
       <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-ash">
         [04] Auto-évaluation · lecture critique
       </p>
 
-      <h1 className="mt-6 font-display text-5xl font-medium leading-[0.95] md:text-7xl">
+      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
         Mesurer le
         <br />
         chemin parcouru<span className="text-accent">.</span>
       </h1>
 
-      <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink/80">
+      <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         Cette page est une <span className="text-ink">lecture honnête</span> de
         mon parcours BAC 3 TI : ce que j&apos;ai appris, ce qui reste à faire,
         et la trajectoire que je me trace. Elle complète les{" "}
@@ -294,7 +294,7 @@ export default function AutoEvaluationPage() {
       <Section num="04" title="Mon plan d'action">
         <div className="grid gap-px bg-rule md:grid-cols-2">
           {actionPlan.map((p, i) => (
-            <article key={p.title} className="flex flex-col bg-bone p-6 md:p-8">
+            <article key={p.title} className="flex flex-col bg-mist p-6 md:p-8">
               <div className="flex items-baseline justify-between">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
                   {String(i + 1).padStart(2, "0")} · {p.horizon}
@@ -314,7 +314,7 @@ export default function AutoEvaluationPage() {
 
       {/* [05] Bilan & perspectives */}
       <Section num="05" title="Bilan & perspectives">
-        <div className="border border-rule bg-mist/40 p-8 md:p-10">
+        <div className="border border-rule bg-mist p-8 md:p-10">
           <p className="max-w-3xl text-base leading-relaxed text-ink/85 md:text-lg">
             Après bientôt trois années de formation à l&apos;EPHEC, je mesure
             le chemin parcouru. De technicien hardware passionné, je suis
