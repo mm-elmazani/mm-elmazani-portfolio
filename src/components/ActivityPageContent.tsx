@@ -1,39 +1,17 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
   activities,
   formatDate,
   getActivity,
   type Activity,
 } from "@/data/activities";
+import MediaCarousel, { type MediaItem } from "@/components/MediaCarousel";
 
-type Params = { slug: string };
+const VIDEO_RE = /\.(mp4|mov|webm|ogg|m4v)$/i;
+const isVideoUrl = (url: string) => VIDEO_RE.test(url);
 
-export function generateStaticParams(): Params[] {
-  return activities.map((a) => ({ slug: a.slug }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<Params>;
-}): Promise<Metadata> {
-  const { slug } = await params;
-  const a = getActivity(slug);
-  if (!a) return { title: "Activité introuvable" };
-  return {
-    title: `${a.title} — Portfolio`,
-    description: a.description,
-  };
-}
-
-export default async function ActivityDetailPage({
-  params,
-}: {
-  params: Promise<Params>;
-}) {
-  const { slug } = await params;
+export default function ActivityPageContent({ slug }: { slug: string }) {
   const a = getActivity(slug);
   if (!a) notFound();
 
@@ -41,6 +19,18 @@ export default async function ActivityDetailPage({
   const idx = activities.findIndex((x) => x.slug === slug);
   const prev = idx > 0 ? activities[idx - 1] : null;
   const next = idx < activities.length - 1 ? activities[idx + 1] : null;
+
+  // Carousel : fusionner images + vidéos extraites des links
+  const videoLinks = (a.proof.links ?? []).filter((l) => isVideoUrl(l.url));
+  const otherLinks = (a.proof.links ?? []).filter((l) => !isVideoUrl(l.url));
+  const carouselMedia: MediaItem[] = [
+    ...(a.proof.images ?? []).map(
+      (url): MediaItem => ({ type: "image", url }),
+    ),
+    ...videoLinks.map(
+      (l): MediaItem => ({ type: "video", url: l.url, label: l.label }),
+    ),
+  ];
 
   return (
     <main className="mx-auto max-w-[1100px] px-5 py-14 md:px-12 md:py-24">
@@ -160,26 +150,6 @@ export default async function ActivityDetailPage({
             {a.proof.description}
           </p>
 
-          <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
-            Lien public
-          </p>
-          <p>
-            {a.proof.url ? (
-              <a
-                href={a.proof.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-sm text-accent underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent"
-              >
-                Accéder à la preuve ↗
-              </a>
-            ) : (
-              <span className="font-mono text-sm text-ash">
-                [URL à compléter]
-              </span>
-            )}
-          </p>
-
           {a.proof.file && (
             <>
               <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
@@ -190,15 +160,39 @@ export default async function ActivityDetailPage({
           )}
         </div>
 
-        {/* Galerie de liens si présente */}
-        {a.proof.links && a.proof.links.length > 0 && (
+        {/* Carousel preuves (photos + vidéos) */}
+        {carouselMedia.length > 0 && (
           <div className="mt-8">
             <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
-              Liens · {a.proof.links.length} ressource
-              {a.proof.links.length > 1 ? "s" : ""}
+              Preuves visuelles · {carouselMedia.length} média
+              {carouselMedia.length > 1 ? "s" : ""}
+              {videoLinks.length > 0 &&
+                ` (${a.proof.images?.length ?? 0} photo${
+                  (a.proof.images?.length ?? 0) > 1 ? "s" : ""
+                } · ${videoLinks.length} vidéo${
+                  videoLinks.length > 1 ? "s" : ""
+                })`}
+            </p>
+            <div className="mt-4">
+              <MediaCarousel media={carouselMedia} title={a.title} />
+            </div>
+            {carouselMedia.length > 1 && (
+              <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                Glisser ou utiliser les flèches pour parcourir.
+              </p>
+            )}
+          </div>
+        )}
+
+        {/* Liens non-vidéo (PDFs, repos, sites, etc.) */}
+        {otherLinks.length > 0 && (
+          <div className="mt-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
+              Liens · {otherLinks.length} ressource
+              {otherLinks.length > 1 ? "s" : ""}
             </p>
             <ul className="mt-4 grid gap-px border border-rule bg-rule sm:grid-cols-2">
-              {a.proof.links.map((l, i) => (
+              {otherLinks.map((l, i) => (
                 <li key={l.url} className="bg-mist">
                   <a
                     href={l.url}
@@ -221,41 +215,6 @@ export default async function ActivityDetailPage({
                 </li>
               ))}
             </ul>
-          </div>
-        )}
-
-        {/* Galerie d'images si présente */}
-        {a.proof.images && a.proof.images.length > 0 && (
-          <div className="mt-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
-              Galerie · {a.proof.images.length} image
-              {a.proof.images.length > 1 ? "s" : ""}
-            </p>
-            <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
-              {a.proof.images.map((src, i) => (
-                <a
-                  key={src}
-                  href={src}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative block aspect-[4/3] overflow-hidden border border-rule bg-mist transition-colors hover:border-accent"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={src}
-                    alt={`Preuve ${i + 1} — ${a.title}`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform group-hover:scale-[1.02]"
-                  />
-                  <span className="absolute bottom-2 right-2 bg-bone/80 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.15em] text-ink backdrop-blur">
-                    {String(i + 1).padStart(2, "0")} ↗
-                  </span>
-                </a>
-              ))}
-            </div>
-            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
-              Cliquer pour ouvrir l&apos;image en plein écran.
-            </p>
           </div>
         )}
       </section>
