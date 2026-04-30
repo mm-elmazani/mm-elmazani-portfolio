@@ -6,6 +6,7 @@ import {
   formatDate,
   totals,
 } from "@/data/activities";
+import { getThemeIcon } from "@/lib/themeIcons";
 
 export const metadata: Metadata = {
   title: "Portfolio d'activités — Mohamed Mokhtar El Mazani",
@@ -182,13 +183,19 @@ export default function PortfolioPage() {
               (s, a) => s + a.hoursValued,
               0,
             );
+            const ThemeIcon = getThemeIcon(theme);
             return (
               <div key={theme}>
                 <header className="flex flex-wrap items-baseline justify-between gap-3 border-b border-rule pb-3">
-                  <h3 className="font-display text-2xl">
+                  <h3 className="flex items-center gap-3 font-display text-2xl">
                     <span className="font-mono text-sm text-accent">
-                      [{String(idx + 1).padStart(2, "0")}]{" "}
+                      [{String(idx + 1).padStart(2, "0")}]
                     </span>
+                    <ThemeIcon
+                      aria-hidden
+                      className="h-5 w-5 shrink-0 text-accent"
+                      strokeWidth={1.75}
+                    />
                     {theme}
                   </h3>
                   <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
