@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>502 — Service indisponible · Portfolio Mohamed Mokhtar El Mazani</title>
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <style>
+      :root {
+        --bone: #f5f5f3;
+        --ink: #0b0b0c;
+        --ash: #a1a1aa;
+        --rule: rgba(11, 11, 12, 0.18);
+        --accent: #38bdf8;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background-color: var(--bone);
+        color: var(--ink);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem 1.25rem;
+        line-height: 1.5;
+      }
+      main { max-width: 720px; margin: 0 auto; width: 100%; }
+      .eyebrow {
+        font-family: ui-monospace, "JetBrains Mono", SFMono-Regular, monospace;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0;
+      }
+      h1 {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-weight: 500;
+        font-size: clamp(2rem, 6vw, 4.5rem);
+        line-height: 1;
+        margin-top: 1.5rem;
+        margin-bottom: 0;
+      }
+      h1 .dot { color: var(--accent); }
+      .lead {
+        margin-top: 1.5rem;
+        font-size: 1rem;
+        color: rgba(11, 11, 12, 0.8);
+        max-width: 36rem;
+      }
+      .lead a { color: var(--ink); }
+      .meta {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--rule);
+        font-family: ui-monospace, "JetBrains Mono", SFMono-Regular, monospace;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--ash);
+      }
+      .actions { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1.25rem;
+        border: 1px solid var(--ink);
+        font-family: ui-monospace, SFMono-Regular, monospace;
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink);
+        text-decoration: none;
+        cursor: pointer;
+        background: transparent;
+      }
+      .btn-primary {
+        background: var(--ink);
+        color: var(--bone);
+      }
+      .btn:hover { background: var(--ink); color: var(--bone); }
+      .btn-primary:hover { background: var(--bone); color: var(--ink); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">[502] · serveur amont injoignable</p>
+      <h1>
+        Le portfolio<br />est temporairement<br />hors ligne<span class="dot">.</span>
+      </h1>
+      <p class="lead">
+        Le serveur applicatif (Next.js) ne répond pas pour le moment. Cela
+        peut arriver pendant un redéploiement ou une coupure réseau du
+        homelab. Réessaie dans quelques minutes. Si l&rsquo;incident persiste,
+        contacte-moi à
+        <a href="mailto:mohamedelmazani.pro@gmail.com">mohamedelmazani.pro@gmail.com</a>.
+      </p>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="location.reload()">Réessayer</button>
+      </div>
+      <p class="meta">
+        Mohamed Mokhtar El Mazani · EPHEC BAC 3 TI · Portfolio
+      </p>
+    </main>
+  </body>
+</html>
