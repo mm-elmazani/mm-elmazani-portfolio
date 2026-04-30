@@ -70,28 +70,34 @@ export const activities: Activity[] = [
     location: "EPHEC, Louvain-la-Neuve",
     status: "completed",
     proof: {
-      type: "Photo + mails d'invitation officiels",
+      type: "Photos du projet baffle Bluetooth + mails d'invitation officiels",
       description:
-        "Photo prise pendant le hackathon + 4 mails officiels EPHEC (invitation, réunion préparatoire Teams, confirmation participation, mention).",
+        "Photo de l'équipe pendant le hackathon, photo du tamtam d'origine récupéré, plan de construction du baffle, liste d'objets utilisés, plans de travail et soudure des composants + 4 mails officiels EPHEC (invitation, réunion préparatoire Teams, confirmation participation, mention).",
       url: "/files/proofs/hackathon-electro-2024/photo-hackathon-2024.jpg",
       file: "public/files/proofs/hackathon-electro-2024/",
       images: [
         "/files/proofs/hackathon-electro-2024/photo-hackathon-2024.jpg",
+        "/files/proofs/hackathon-electro-2024/tamtam.jpg",
+        "/files/proofs/hackathon-electro-2024/plan-construction-baffle.png",
+        "/files/proofs/hackathon-electro-2024/liste-objets-hackathon.png",
+        "/files/proofs/hackathon-electro-2024/plan-travail-1.jpg",
+        "/files/proofs/hackathon-electro-2024/plan-travail-2.jpg",
+        "/files/proofs/hackathon-electro-2024/soudure.jpg",
       ],
     },
     description:
-      "Hackathon EPHEC 48h sur le thème « récupérer de l'ancien pour imaginer et créer des produits modernes ». Conception d'un prototype innovant à partir de matériel récupéré.",
+      "Mon tout premier hackathon : 48h à l'EPHEC sur le thème « récupérer de l'ancien pour imaginer et créer des produits modernes ». Avec mon équipe, nous avons transformé un vieux tamtam en baffle Bluetooth fonctionnel — un week-end intense entre challenge technique et amusement.",
     reflection: {
       context:
-        "J'ai participé au Hackathon Électro 2024 organisé par les professeurs de la section TI de l'EPHEC. L'événement rassemblait des étudiants de plusieurs années pour relever des défis de conception et de prototypage autour du thème du recyclage électronique et de l'innovation low-tech.",
+        "C'était mon tout premier hackathon — toutes catégories confondues. Quand l'EPHEC a annoncé le Hackathon Électro 2024 organisé par les professeurs de la section TI sur le thème « récupérer de l'ancien pour imaginer et créer des produits modernes », j'étais super excité à l'idée de participer à ce week-end : 48h non-stop avec une équipe, du matériel à récupérer, un défi à relever. Je n'avais aucune idée de ce qu'allait être réellement un hackathon avant d'y entrer, et c'est exactement ce qui me motivait — vivre l'expérience pour la comprendre.",
       facts:
-        "Avec mon équipe, nous avons imaginé et développé un prototype fonctionnel à partir de matériel ancien. Le hackathon s'est déroulé sur un week-end complet, avec une réunion préparatoire sur Teams, des phases de brainstorming, de conception et de présentation finale des projets.",
+        "Avec mon équipe, on a transformé un vieux tamtam en baffle Bluetooth fonctionnel. Le tamtam servait de caisse de résonance, on a intégré un module Bluetooth, un amplificateur, une batterie, un haut-parleur, et on a fini par avoir un objet hybride : à la fois instrument du passé et speaker connecté. Les 48h se sont articulées autour d'une réunion préparatoire Teams en amont, puis un week-end complet sur place : brainstorming, planches de construction (cf. preuves photos), liste d'objets à récupérer, phases de soudure et d'assemblage, et présentation finale du prototype face au jury.",
       projectLink:
-        "Cette expérience m'a permis d'explorer la création d'objets connectés à faible coût et à faible impact environnemental, en lien direct avec mon intérêt pour l'IoT et le prototypage électronique. Elle a renforcé ma créativité et ma capacité à travailler en équipe dans des délais très courts.",
+        "Cette expérience m'a permis d'explorer concrètement la création d'objets connectés à partir de matériel récupéré — exactement le type de prototypage IoT low-tech qui rejoint mon projet pro orienté infrastructure et hardware. Plus largement, ce hackathon m'a confirmé que je m'épanouis dans des contextes où il faut produire vite, avec des contraintes fortes et une équipe qui cherche en parallèle. C'est un format que je veux retrouver en milieu pro.",
       skills:
-        "J'ai développé des compétences en prototypage électronique, travail collaboratif, gestion du temps, et présentation de projet. J'ai aussi découvert de nouvelles approches d'innovation circulaire et de réutilisation de composants.",
+        "Au-delà du prototypage électronique pur (soudure, intégration Bluetooth, gestion d'alimentation), j'ai surtout développé ma capacité à collaborer sous pression : répartir les tâches en quelques minutes, accepter les idées des autres, trancher rapidement quand on bloque. J'ai aussi appris à itérer sur un design quand le matériel récupéré ne se comporte pas comme prévu — accepter de jeter une piste pour en relancer une autre sans s'attacher.",
       conclusion:
-        "Ce hackathon m'a sensibilisé à la dimension durable de l'innovation technologique. Je compte réinvestir cette approche dans mes futurs projets IoT en intégrant davantage la récupération de composants et le design low-tech.",
+        "Si je devais résumer ce week-end en deux mots, ce serait challenge et amusement. C'était surtout un super moment passé avec mes collègues d'équipe — la pression, la fatigue, les blagues qui sortent à 2h du matin quand un câble lâche, c'est ce qui rend l'expérience inoubliable. J'en suis ressorti convaincu que les hackathons ne sont pas juste un format scolaire : c'est un terrain réel pour apprendre à livrer ensemble, et je compte en refaire d'autres.",
     },
     skills: [
       "Prototypage électronique",
@@ -157,18 +163,18 @@ export const activities: Activity[] = [
       ],
     },
     description:
-      "Réparation de 5 smartphones différents : remplacement d'écrans, batteries et ports de charge.",
+      "Depuis fin 2023, je répare des smartphones à la maison pour des amis et des membres de ma famille — principalement des iPhones (écran, batterie, caméra) et plus rarement un Samsung. Cette pratique a démarré par envie d'élargir mes réparations au-delà des PC, et continue aujourd'hui de manière régulière.",
     reflection: {
       context:
-        "Entre janvier et février 2024, j'ai effectué la réparation de 5 smartphones pour des particuliers de mon entourage. Cette activité découle de ma passion pour le hardware et de mon expérience personnelle en réparation électronique.",
+        "Vers la fin de 2023, j'ai commencé à réparer des smartphones à la maison pour des amis et des membres de ma famille. À la base, je réparais déjà des PC — portables ou fixes — et je voulais découvrir un autre type de réparation, plus minutieux et avec des contraintes différentes : composants encore plus petits, étanchéité à respecter, peu de tolérance pour l'erreur. Les smartphones sont aussi le matériel que tout le monde dans mon entourage utilise au quotidien, donc les demandes arrivaient naturellement.",
       facts:
-        "Les interventions réalisées incluaient : 2 remplacements d'écran (iPhone 11 et Samsung A52), 2 changements de batterie (iPhone 8 et Xiaomi Redmi Note 9), et 1 réparation de port de charge (OnePlus 7). Chaque réparation a nécessité en moyenne 2h30 de travail minutieux, incluant le diagnostic, la commande des pièces et l'intervention.",
+        "J'ai principalement réparé des iPhones — changement d'écran, remplacement de batterie, changement de caméra — ce sont les pannes les plus fréquentes que mon entourage me ramène. J'ai aussi réparé une seule fois un Samsung. Chaque intervention prend en moyenne 2h30 entre le diagnostic, la commande de la pièce d'origine ou compatible, le démontage minutieux, le remplacement et le remontage avec test fonctionnel. Les preuves jointes (photos avant/après + vidéos de démontage/remontage) couvrent 5 réparations parmi celles que j'ai effectuées.",
       projectLink:
-        "Cette activité renforce directement mes compétences en diagnostic et résolution de problèmes hardware, essentielles pour un futur technicien IT. La capacité à réparer et maintenir du matériel informatique est un atout majeur dans le support technique, domaine que je vise pour mon stage.",
+        "Cette activité renforce directement mes compétences en diagnostic et résolution de problèmes hardware, essentielles pour un futur technicien IT. La capacité à réparer et maintenir du matériel informatique — du PC au smartphone — est un atout majeur dans le support technique, domaine que je vise pour mon stage.",
       skills:
-        "J'ai perfectionné ma dextérité manuelle et ma précision dans la manipulation de composants fragiles. J'ai appris à gérer la relation client, depuis le diagnostic initial jusqu'à la livraison, en passant par la communication sur les délais et les coûts. La gestion des stocks de pièces détachées m'a initié aux problématiques logistiques.",
+        "J'ai perfectionné ma dextérité et ma précision dans la manipulation de composants fragiles (nappes, connecteurs, joints d'étanchéité). J'ai appris à gérer la relation directe avec la personne dont je répare le téléphone : poser les bonnes questions au diagnostic, expliquer ce qu'on va faire, communiquer clairement sur le délai et le coût des pièces. C'est aussi une activité qui m'a appris à gérer ma frustration quand une pièce arrive défectueuse ou qu'un démontage tourne mal.",
       conclusion:
-        "Cette expérience m'a confirmé mon intérêt pour le hardware et m'a donné confiance dans ma capacité à gérer des interventions techniques de manière autonome. Je prévois d'étendre mes compétences aux réparations de laptops et tablettes.",
+        "Cette pratique m'a confirmé mon intérêt pour le hardware et m'a donné confiance dans ma capacité à gérer des interventions techniques de manière autonome, de A à Z. Je continue aujourd'hui à accepter les réparations qu'on me propose et je prévois d'étendre progressivement aux tablettes.",
     },
     skills: [
       "Hardware",
@@ -299,12 +305,30 @@ export const activities: Activity[] = [
     location: "AXA Belgium, Place du Trône, Bruxelles",
     status: "completed",
     proof: {
-      type: "Dossier preuves PDF (badge + photos + programme)",
+      type: "Photos de la soirée + dossier preuves PDF (badge + programme)",
       description:
-        "Dossier PDF compilant le badge d'accès AXA, le programme officiel, des photos prises pendant la soirée (Silent Disco, Speed Networking, Street Food) et la trace des connexions LinkedIn établies.",
+        "17 photos prises sur place : programme officiel, badge d'accès AXA, accueil et intro de Mathieu, présentations IA chez AXA (SecureGPT, GitHub Copilot, COO Assistant), présentations Business Transformation / programme CLUP, et photos de la soirée (Silent Disco, Speed Networking, Street Food). + dossier PDF compilant le badge et le programme.",
       url: "/files/proofs/tech-career-night-axa-2025/axa_tech_night_2025.pdf",
-      file: "public/files/proofs/tech-career-night-axa-2025/axa_tech_night_2025.pdf",
-      images: [],
+      file: "public/files/proofs/tech-career-night-axa-2025/",
+      images: [
+        "/files/proofs/tech-career-night-axa-2025/axa-01-programme.png",
+        "/files/proofs/tech-career-night-axa-2025/axa-02-badge.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-03-accueil-intro-mathieu.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-04-accueil.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-05-activites-evenement.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-06-ia-axa-part1.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-07-ia-axa-part2.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-08-ia-axa-part4.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-09-ia-axa-part6.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-10-ia-axa-part8.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-11-ia-axa-part9.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-12-business-transformation-part1.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-13-business-transformation-part2.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-14-business-transformation-part5.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-15-soiree-1.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-16-soiree-2.jpg",
+        "/files/proofs/tech-career-night-axa-2025/axa-17-soiree-3.jpg",
+      ],
     },
     description:
       "Tech Career Night AXA Belgium au siège de Bruxelles. Découverte de l'innovation IT, IA, Cloud et transformation digitale dans l'assurance.",
@@ -375,7 +399,7 @@ export const activities: Activity[] = [
       "Visite du SETT Expo (Salon Education Tech) à Namur Expo : découverte des solutions technologiques appliquées au secteur de l'éducation — tableaux blancs interactifs, outils pédagogiques IA, applications spécialisées — et networking avec des entreprises tech et professionnels du secteur.",
     reflection: {
       context:
-        "En octobre 2025, j'ai visité le SETT (Salon Education Tech) à Namur Expo. Ce salon spécialisé rassemble exposants, enseignants, responsables IT du secteur éducatif et professionnels de l'EdTech autour des technologies appliquées à l'enseignement. L'objectif de ma visite était de découvrir des solutions IT déployées dans un secteur spécifique (l'éducation) et d'élargir mon réseau professionnel au-delà de mon cercle EPHEC.",
+        "Le 29 janvier 2026, j'ai visité le SETT (Salon Education Tech) à Namur Expo. Ce salon spécialisé rassemble exposants, enseignants, responsables IT du secteur éducatif et professionnels de l'EdTech autour des technologies appliquées à l'enseignement. L'objectif de ma visite était de découvrir des solutions IT déployées dans un secteur spécifique (l'éducation) et d'élargir mon réseau professionnel au-delà de mon cercle EPHEC.",
       facts:
         "J'ai exploré différentes innovations présentées sur les stands : tableaux blancs interactifs, outils pédagogiques basés sur l'intelligence artificielle, applications spécialisées pour l'enseignement primaire et secondaire. J'ai assisté à plusieurs démonstrations produit et échangé avec des représentants commerciaux et techniques d'entreprises EdTech. J'ai également pu dialoguer avec des professionnels du secteur (enseignants, responsables IT d'écoles, intégrateurs), ce qui m'a permis de comprendre concrètement les contraintes de déploiement IT en milieu éducatif.",
       projectLink:
@@ -455,9 +479,9 @@ export const activities: Activity[] = [
     location: "EPHEC, Louvain-la-Neuve",
     status: "completed",
     proof: {
-      type: "PDF récap + invitation officielle + photos",
+      type: "PDFs : récap, invitation officielle, photos compilées",
       description:
-        "Trois documents : courrier d'invitation officiel EPHEC × Wallonie Entreprendre, dossier photos compilées du projet (PS2 modifiée en media server RGB), et PDF récap du hackathon.",
+        "Trois PDFs : courrier d'invitation officiel EPHEC × Wallonie Entreprendre, dossier compilé des photos du projet (PS2 modifiée en media server avec éclairage RGB), et PDF récap du hackathon.",
       url: "/files/proofs/hackathon-upscaling-2025/photo-preuves-hackathon.pdf",
       file: "public/files/proofs/hackathon-upscaling-2025/",
       images: [],
