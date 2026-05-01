@@ -140,8 +140,8 @@ export default function ProjetProPage() {
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         En BAC 3 TI, je ne cherche pas à figer un plan de carrière rigide. Je{" "}
-        <span className="text-ink">consolide actuellement mes bases</span> sur
-        le terrain via mon stage à l&apos;administration communale
+        <span className="text-ink">consolide actuellement mes bases</span>
+        {" "}sur le terrain via mon stage à l&apos;administration communale
         d&apos;Ottignies-LLN. Je confronte mes compétences au réel et je
         laisse cette expérience orienter mes choix futurs.
       </p>

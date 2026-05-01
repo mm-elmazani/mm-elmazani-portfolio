@@ -46,7 +46,8 @@ export default function Home() {
         Étudiant BAC 3 en Technologies de l&apos;Informatique à l&apos;EPHEC.
         Curieux et autodidacte, je navigue naturellement entre le{" "}
         <span className="text-ink">hardware</span>, les{" "}
-        <span className="text-ink">réseaux</span> et l&apos;
+        <span className="text-ink">réseaux</span>
+        {" "}et l&apos;{" "}
         <span className="text-ink">administration système</span>. Ce qui me
         définit : la rigueur d&apos;un technicien et l&apos;envie constante de
         comprendre comment les choses fonctionnent — du composant au

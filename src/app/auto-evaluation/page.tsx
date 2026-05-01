@@ -8,37 +8,37 @@ export const metadata: Metadata = {
 
 const evolution = [
   {
-    date: "Septembre 2023",
+    date: "septembre 2023",
     title: "Début de formation EPHEC",
     desc: "Bases limitées en programmation, beaucoup d'appréhension. Connaissances principalement hardware acquises en autodidacte.",
   },
   {
-    date: "Septembre 2024",
+    date: "septembre 2024",
     title: "Premiers projets réussis",
     desc: "Scripts Python, configuration de réseaux, premières manipulations Linux. Début de confiance dans mes capacités techniques.",
   },
   {
-    date: "Juin 2025",
+    date: "juin 2025",
     title: "Projets complexes maîtrisés",
     desc: "VPS Docker complet, application MERN PowerTrack. Passage de scripts isolés à des architectures complètes.",
   },
   {
-    date: "Octobre 2025",
+    date: "octobre 2025",
     title: "Networking & ouverture",
     desc: "Tech Career Night AXA, Hackathon Upscaling. Premières connexions professionnelles, vision plus claire du marché IT.",
   },
   {
-    date: "Avril 2026",
+    date: "avril 2026",
     title: "Stage de fin d'études en cours",
     desc: "Confrontation au réel : production, contraintes, équipe. Le stage façonne la suite de ma trajectoire.",
   },
 ];
 
 const skillsProgress = [
-  { name: "Hardware & support IT", value: 85 },
-  { name: "Réseaux & infrastructure", value: 65 },
+  { name: "Hardware et support IT", value: 85 },
+  { name: "Réseaux et infrastructure", value: 65 },
   { name: "Développement web", value: 55 },
-  { name: "Cloud & DevOps", value: 45 },
+  { name: "Cloud et DevOps", value: 45 },
   { name: "Cybersécurité", value: 40 },
   { name: "Soft skills (communication, équipe)", value: 70 },
 ];
@@ -130,8 +130,9 @@ export default function AutoEvaluationPage() {
       </h1>
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
-        Cette page est une <span className="text-ink">lecture honnête</span> de
-        mon parcours BAC 3 TI : ce que j&apos;ai appris, ce qui reste à faire,
+        Cette page est une <span className="text-ink">lecture honnête</span>
+        {" "}de mon parcours BAC 3 TI : ce que j&apos;ai appris, ce qui reste à
+        faire,
         et la trajectoire que je me trace. Elle complète les{" "}
         <a
           href="/projet-pro"
@@ -210,8 +211,9 @@ export default function AutoEvaluationPage() {
               les répéter, devenir compétent. Le déclic est venu en
               progressant dans le cursus — j&apos;ai compris que le domaine
               est{" "}
-              <span className="text-ink">infiniment plus vaste</span> que ce
-              que j&apos;imaginais, et qu&apos;il évolue plus vite que la
+              <span className="text-ink">infiniment plus vaste</span>
+              {" "}que ce que j&apos;imaginais, et qu&apos;il évolue plus vite
+              que la
               capacité d&apos;une formation à le couvrir.
             </p>
             <p className="mt-4">

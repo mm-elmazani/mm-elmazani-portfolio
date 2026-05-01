@@ -24,13 +24,13 @@ const formations: TimelineItem[] = [
   },
   {
     date: "2022",
-    title: "CESS · Sciences Économiques — immersion anglais",
+    title: "CESS · Sciences Économiques — immersion anglaise",
     subtitle: "CEPES de Jodoigne",
     description:
       "Certificat d'enseignement secondaire supérieur avec option immersion anglaise.",
   },
   {
-    date: "Février 2020",
+    date: "février 2020",
     title: "Séjour linguistique anglais",
     subtitle: "Broadstairs, Angleterre",
     description:
@@ -40,7 +40,7 @@ const formations: TimelineItem[] = [
 
 const experiences: TimelineItem[] = [
   {
-    date: "Février — mai 2026",
+    date: "février — mai 2026",
     title: "Stage d'insertion professionnelle — Migration serveur VoIP",
     subtitle: "Administration communale d'Ottignies-Louvain-la-Neuve",
     description:
@@ -51,7 +51,7 @@ const experiences: TimelineItem[] = [
     title: "Assistance informatique aux particuliers",
     subtitle: "Travailleur indépendant",
     bullets: [
-      "Montage & installation d'environ 10 PC sur mesure",
+      "Montage et installation d'environ 10 PC sur mesure",
       "Réinstallation Windows, dépannage et support utilisateur",
       "Remplacement SSD/RAM, diagnostic matériel",
       "Support à distance (Remote Desktop)",
@@ -59,7 +59,7 @@ const experiences: TimelineItem[] = [
     ],
   },
   {
-    date: "Juillet 2023",
+    date: "juillet 2023",
     title: "Technicien de surface",
     subtitle: "ISS · Bruxelles — job étudiant",
     description:
@@ -70,7 +70,7 @@ const experiences: TimelineItem[] = [
 const skills: { group: string; items: string[] }[] = [
   {
     group: "Hardware",
-    items: ["Montage & diagnostic PC", "Réparation smartphones", "Soudure électronique"],
+    items: ["Montage et diagnostic PC", "Réparation smartphones", "Soudure électronique"],
   },
   {
     group: "Réseaux",
