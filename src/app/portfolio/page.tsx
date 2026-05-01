@@ -79,7 +79,108 @@ export default function PortfolioPage() {
           Format imposé par les modalités EPHEC.
         </p>
 
-        <div className="mt-6 overflow-x-auto border border-rule">
+        {/* Mobile : liste de cartes empilées (< md) */}
+        <ul className="mt-6 space-y-3 md:hidden">
+          {sorted.map((a) => (
+            <li
+              key={a.id}
+              className="border border-rule bg-mist p-4"
+            >
+              <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                {a.theme}
+              </p>
+              <h3 className="mt-2 font-display text-lg leading-tight">
+                <Link
+                  href={`/portfolio/${a.slug}`}
+                  className="text-ink underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
+                >
+                  {a.title}
+                </Link>
+              </h3>
+              <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs">
+                <div>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                    Lieu
+                  </dt>
+                  <dd className="mt-0.5 text-sm">
+                    {a.location ?? (
+                      <span className="text-ash">[À compléter]</span>
+                    )}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                    Date
+                  </dt>
+                  <dd className="mt-0.5 font-mono text-xs">
+                    {formatDate(a.date)}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                    H. valorisées
+                  </dt>
+                  <dd className="mt-0.5 font-mono text-sm text-accent">
+                    {a.hoursValued}h
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                    H. réelles
+                  </dt>
+                  <dd className="mt-0.5 font-mono text-sm">
+                    {a.realHours !== null ? (
+                      `${a.realHours}h`
+                    ) : (
+                      <span className="text-ash">[À c.]</span>
+                    )}
+                  </dd>
+                </div>
+              </dl>
+              <Link
+                href={`/portfolio/${a.slug}#preuve`}
+                className="mt-4 inline-block font-mono text-xs uppercase tracking-wider text-accent transition-colors hover:underline"
+              >
+                {a.proof.type} →
+              </Link>
+            </li>
+          ))}
+          {/* Carte total (mobile) */}
+          <li className="border-2 border-ink bg-mist p-4">
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em]">
+              Total
+            </p>
+            <dl className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2 text-xs">
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                  H. valorisées
+                </dt>
+                <dd className="mt-0.5 font-mono text-base font-semibold text-accent">
+                  {t.hoursValued}h
+                </dd>
+              </div>
+              <div>
+                <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                  H. réelles
+                </dt>
+                <dd className="mt-0.5 font-mono text-base font-semibold">
+                  {t.realHours}h
+                </dd>
+              </div>
+              <div className="col-span-2">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                  Bilan
+                </dt>
+                <dd className="mt-0.5 font-mono text-sm">
+                  {t.activitiesCount} activités · {t.themesCount} thèmes
+                </dd>
+              </div>
+            </dl>
+          </li>
+        </ul>
+
+        {/* Desktop : tableau (>= md) */}
+        <div className="mt-6 hidden overflow-x-auto border border-rule md:block">
           <table className="w-full min-w-[900px] border-collapse text-sm">
             <thead className="bg-mist">
               <tr className="text-left">
