@@ -1,4 +1,27 @@
-import type { Metadata } from "next";
+// Script one-shot pour générer les 11 pages slug d'activités.
+// Chaque page = orchestration des composants partagés (cf. src/components/).
+// Usage : node scripts/generate-activity-pages.mjs
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirname, "..");
+const SLUGS = [
+  "hackathon-electro-2024",
+  "reparation-smartphones-2024",
+  "montage-pc-gaming-2024",
+  "labo-electronique-cables-2025",
+  "tech-career-night-axa-2025",
+  "conference-cybersecurite-redsystem-2025",
+  "visite-sett-namur-2025",
+  "hackathon-upscaling-2025",
+  "homelab-personnel-2025",
+  "developpement-web-projets-perso-2024-2025",
+  "jobiste-printemps-sciences-2025",
+];
+
+const template = (slug) => `import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { activities, getActivity } from "@/data/activities";
@@ -11,12 +34,12 @@ import ProofMedia from "@/components/ProofMedia";
 import ProofLinks from "@/components/ProofLinks";
 import ActivityNav from "@/components/ActivityNav";
 
-const SLUG = "reparation-smartphones-2024";
+const SLUG = "${slug}";
 const activity = getActivity(SLUG);
 
 export const metadata: Metadata = activity
   ? {
-      title: `${activity.title} — Portfolio`,
+      title: \`\${activity.title} — Portfolio\`,
       description: activity.description,
     }
   : { title: "Activité introuvable" };
@@ -85,3 +108,14 @@ export default function Page() {
     </main>
   );
 }
+`;
+
+let count = 0;
+for (const slug of SLUGS) {
+  const target = path.join(ROOT, "src/app/portfolio", slug, "page.tsx");
+  fs.writeFileSync(target, template(slug), "utf8");
+  console.log("✓ wrote", path.relative(ROOT, target));
+  count++;
+}
+
+console.log(`\n✅ ${count} pages slug régénérées avec composants partagés.`);
