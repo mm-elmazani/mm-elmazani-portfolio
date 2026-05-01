@@ -18,7 +18,7 @@ export default function ActivityMeta({ activity }: { activity: Activity }) {
         label="Heures réelles"
         value={
           activity.realHours !== null
-            ? `${activity.realHours}h`
+            ? `${activity.realHoursOngoing ? "+" : ""}${activity.realHours}h`
             : "[À compléter]"
         }
         muted={activity.realHours === null}

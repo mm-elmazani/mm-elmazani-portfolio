@@ -48,6 +48,7 @@ export type Activity = {
   type: ActivityType;
   hoursValued: number; // heures valorisées (rubric)
   realHours: number | null; // heures réelles (rubric, ≥ valorisées)
+  realHoursOngoing?: boolean; // true → afficher "+Xh" (activité encore en cours)
   date: string; // ISO YYYY-MM-DD
   location: string | null; // lieu (rubric)
   status: "completed" | "ongoing" | "planned";
@@ -533,6 +534,7 @@ export const activities: Activity[] = [
     type: "Autre",
     hoursValued: 10,
     realHours: 35,
+    realHoursOngoing: true,
     date: "2025-11-01",
     location: "Domicile / Jodoigne",
     status: "ongoing",
@@ -586,6 +588,7 @@ export const activities: Activity[] = [
     type: "Autre",
     hoursValued: 10,
     realHours: 25,
+    realHoursOngoing: true,
     date: "2025-06-01",
     location: "Domicile / Jodoigne",
     status: "ongoing",
@@ -637,8 +640,8 @@ export const activities: Activity[] = [
     title:
       "Jobiste au Printemps des Sciences — animation bras robotisé industriel",
     type: "Autre",
-    hoursValued: 8,
-    realHours: 12,
+    hoursValued: 3,
+    realHours: 3,
     date: "2025-03-24",
     location: "EPHEC, Louvain-la-Neuve",
     status: "completed",

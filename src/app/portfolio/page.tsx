@@ -130,7 +130,7 @@ export default function PortfolioPage() {
                   </dt>
                   <dd className="mt-0.5 font-mono text-sm">
                     {a.realHours !== null ? (
-                      `${a.realHours}h`
+                      `${a.realHoursOngoing ? "+" : ""}${a.realHours}h`
                     ) : (
                       <span className="text-ash">[À c.]</span>
                     )}
@@ -229,7 +229,10 @@ export default function PortfolioPage() {
                   </Td>
                   <Td align="right">
                     {a.realHours !== null ? (
-                      <span className="font-mono text-sm">{a.realHours}h</span>
+                      <span className="font-mono text-sm">
+                        {a.realHoursOngoing ? "+" : ""}
+                        {a.realHours}h
+                      </span>
                     ) : (
                       <span className="font-mono text-xs text-ash">[À c.]</span>
                     )}
