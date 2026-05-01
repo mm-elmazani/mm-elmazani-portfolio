@@ -169,13 +169,13 @@ export const activities: Activity[] = [
       context:
         "Vers la fin de 2023, j'ai commencé à réparer des smartphones à la maison pour des amis et des membres de ma famille. À la base, je réparais déjà des PC — portables ou fixes — et je voulais découvrir un autre type de réparation, plus minutieux et avec des contraintes différentes : composants encore plus petits, étanchéité à respecter, peu de tolérance pour l'erreur. Les smartphones sont aussi le matériel que tout le monde dans mon entourage utilise au quotidien, donc les demandes arrivaient naturellement.",
       facts:
-        "J'ai principalement réparé des iPhones — changement d'écran, remplacement de batterie, changement de caméra — ce sont les pannes les plus fréquentes que mon entourage me ramène. J'ai aussi réparé une seule fois un Samsung. Chaque intervention prend en moyenne 2h30 entre le diagnostic, la commande de la pièce d'origine ou compatible, le démontage minutieux, le remplacement et le remontage avec test fonctionnel. Les preuves jointes (photos avant/après + vidéos de démontage/remontage) couvrent 5 réparations parmi celles que j'ai effectuées.",
+        "J'ai principalement réparé des iPhones — changement d'écran, remplacement de batterie, changement de caméra — ce sont les pannes les plus fréquentes que mon entourage me ramène. J'ai aussi réparé une seule fois un Samsung. Chaque intervention prend en moyenne 2h30 entre le diagnostic, le démontage minutieux, le remplacement et le remontage avec test fonctionnel. Les preuves jointes (photos avant/après + vidéos de démontage/remontage) couvrent 5 réparations parmi celles que j'ai effectuées.",
       projectLink:
         "Cette activité renforce directement mes compétences en diagnostic et résolution de problèmes hardware, essentielles pour un futur technicien IT. La capacité à réparer et maintenir du matériel informatique — du PC au smartphone — est un atout majeur dans le support technique, domaine que je vise pour mon stage.",
       skills:
         "J'ai perfectionné ma dextérité et ma précision dans la manipulation de composants fragiles (nappes, connecteurs, joints d'étanchéité). J'ai appris à gérer la relation directe avec la personne dont je répare le téléphone : poser les bonnes questions au diagnostic, expliquer ce qu'on va faire, communiquer clairement sur le délai et le coût des pièces. C'est aussi une activité qui m'a appris à gérer ma frustration quand une pièce arrive défectueuse ou qu'un démontage tourne mal.",
       conclusion:
-        "Cette pratique m'a confirmé mon intérêt pour le hardware et m'a donné confiance dans ma capacité à gérer des interventions techniques de manière autonome, de A à Z. Je continue aujourd'hui à accepter les réparations qu'on me propose et je prévois d'étendre progressivement aux tablettes.",
+        "Cette pratique m'a confirmé mon intérêt pour le hardware et m'a donné confiance dans ma capacité à gérer des interventions techniques de manière autonome, de A à Z. Elle m'a aussi appris à gérer les attentes d'un client réel : expliquer un délai de livraison de pièce, communiquer honnêtement quand une réparation est risquée, et savoir dire non à une intervention qui dépasse mes capacités actuelles. Je continue aujourd'hui à accepter les réparations qu'on me propose et je prévois d'étendre progressivement aux marques et modèles de téléphones.",
     },
     skills: [
       "Hardware",
@@ -241,7 +241,7 @@ export const activities: Activity[] = [
       skills:
         "J'ai approfondi mes connaissances sur l'architecture des PC modernes, l'optimisation des performances via BIOS, la gestion thermique et le diagnostic matériel par éliminations successives. Servir plusieurs clients aux profils différents m'a appris à traduire des besoins variés en solutions techniques cohérentes (et à dire non aux composants surdimensionnés pour l'usage). La documentation systématique de chaque montage m'a initié aux bonnes pratiques professionnelles : photos d'étapes, liste de pièces, notes BIOS.",
       conclusion:
-        "Ces interventions m'ont donné une vision complète du cycle de vie d'un PC, de la conception à la livraison en passant par le SAV. Je souhaite maintenant transposer cette rigueur d'assemblage et de diagnostic vers les configurations serveur et workstation pour élargir mon champ de compétences vers l'infrastructure professionnelle.",
+        "Ces interventions m'ont donné une vision complète du cycle de vie d'un PC, de la conception à la livraison en passant par le SAV. J'ai aussi réalisé que chaque client reparti satisfait est une validation concrète de mes compétences — plus parlante qu'un TP noté. Je souhaite maintenant transposer cette rigueur d'assemblage et de diagnostic vers les configurations serveur et workstation, pour élargir mon champ de compétences vers l'infrastructure professionnelle.",
     },
     skills: [
       "Assemblage PC",
@@ -278,13 +278,13 @@ export const activities: Activity[] = [
       context:
         "En avril 2025, les professeurs du laboratoire d'électronique de l'EPHEC ont sollicité de l'aide pour restaurer l'ensemble des câbles de test et de connexion du laboratoire. Ces câbles, utilisés intensivement par les étudiants depuis plusieurs années, présentaient des problèmes de connectivité et nécessitaient un diagnostic complet et des réparations.",
       facts:
-        "J'ai passé 2 heures à diagnostiquer, réparer et tester plusieurs câbles. Les interventions incluaient : test de continuité au multimètre, identification des câbles défectueux, re-soudure des connexions endommagées.",
+        "J'ai passé 2 heures à inspecter l'ensemble des câbles du laboratoire, principalement les fils de raccordement utilisés lors des TP sur des breadboards. Pour chacun, j'ai réalisé un test de continuité au multimètre pour identifier ceux présentant une coupure ou une résistance anormale. Les câbles défectueux ont été remis à neuf : dénudage des fils, re-soudure des connecteurs endommagés, remplacement des gaines thermorétractables, et test de validation final. Environ un tiers des câbles inspectés nécessitait une intervention.",
       projectLink:
         "Cette activité de maintenance pratique s'inscrit directement dans mes compétences en support technique et hardware. La capacité à diagnostiquer et réparer du matériel de laboratoire est une compétence transférable au support IT en entreprise, où la maintenance préventive et corrective du matériel est essentielle.",
       skills:
-        "J'ai développé ma rigueur dans le diagnostic systématique et ma précision en micro-soudure.",
+        "J'ai développé ma rigueur dans le diagnostic systématique — tester chaque câble méthodiquement plutôt que de remplacer à l'aveugle. J'ai consolidé ma maîtrise du multimètre en mode continuité, et ma précision en soudure sur de petits connecteurs. Cette session m'a aussi appris à travailler proprement dans un environnement partagé : laisser le matériel en meilleur état qu'on ne l'a trouvé est une discipline professionnelle, pas seulement technique.",
       conclusion:
-        "Cette expérience courte mais intense m'a confirmé mon intérêt pour le hardware et le support technique. Elle démontre ma disponibilité à aider et ma polyvalence technique, qualités importantes pour un futur technicien IT.",
+        "Cette intervention courte m'a rappelé que la maintenance préventive est souvent invisible mais critique : des câbles défectueux faussent les mesures, font perdre du temps aux étudiants et dégradent la confiance dans le matériel. Prendre 2h pour remettre en état un parc complet, c'est exactement le type de mission qu'un technicien IT réalise en silence — et qui a un impact réel, même si personne ne le remarque.",
     },
     skills: [
       "Soudure CMS",
@@ -408,7 +408,7 @@ export const activities: Activity[] = [
       skills:
         "J'ai développé mes compétences en networking professionnel (présenter mon parcours en quelques phrases, recueillir des contacts pertinents), enrichi ma culture EdTech et compris les enjeux d'intégration IT dans un secteur spécialisé. J'ai aussi appris à dialoguer avec différents profils (commerciaux, techniques, utilisateurs finaux) sur un même sujet — compétence transversale clé pour un futur technicien/ingénieur IT.",
       conclusion:
-        "Cette visite m'a confirmé que l'IT touche tous les secteurs, et que la valeur ajoutée se trouve souvent dans l'adaptation des technologies aux besoins réels des utilisateurs. Je compte continuer à participer à des salons sectoriels (santé, industrie, finance, smart city) pour élargir ma vision du marché et identifier les domaines verticaux où mes compétences infra IT pourront s'exprimer pleinement.",
+        "Cette visite m'a confirmé que l'IT touche tous les secteurs, et que la valeur ajoutée se trouve souvent dans l'adaptation des technologies aux besoins réels des utilisateurs. Je compte continuer à participer à des salons sectoriels (santé, industrie, finance, smart city) pour élargir ma vision du marché et identifier les domaines verticaux où mes compétences infra IT pourront s'exprimer pleinement. Chaque salon est une opportunité de sortir de la bulle technique et de comprendre ce que le terrain attend vraiment d'un technicien IT.",
     },
     skills: [
       "Networking professionnel",
@@ -589,7 +589,7 @@ export const activities: Activity[] = [
     hoursValued: 10,
     realHours: 25,
     realHoursOngoing: true,
-    date: "2025-06-01",
+    date: "2025-08-12",
     location: "Domicile / Jodoigne",
     status: "ongoing",
     proof: {
@@ -620,7 +620,7 @@ export const activities: Activity[] = [
       skills:
         "Développement front-end (React, Next.js, HTML/CSS/JS), gestion de versions Git/GitHub, déploiement et hébergement web, conception d'interfaces utilisateur, autonomie sur la chaîne complète (idée → code → déploiement → maintenance), capacité à choisir la bonne stack selon le contexte (over-engineering évité quand HTML/CSS/JS suffit).",
       conclusion:
-        "Cette polyvalence dev/infra est un atout différenciant pour mon profil : à l'aise autant côté serveur que côté applicatif. Je compte continuer à publier mes projets en open-source, enrichir mon site personnel, et faire le pont entre mes compétences infra (homelab) et dev (web) en hébergeant moi-même mes propres applications.",
+        "Cette polyvalence dev/infra est un atout différenciant pour mon profil : à l'aise autant côté serveur que côté applicatif. Livrer pour de vraies personnes — même des amis — m'a aussi appris à gérer les retours utilisateurs et à arbitrer entre ce qu'on veut faire et ce dont l'utilisateur a réellement besoin. Je compte continuer à publier mes projets en open-source, enrichir mon site personnel, et faire le pont entre mes compétences infra (homelab) et dev (web) en hébergeant moi-même mes propres applications.",
     },
     skills: [
       "React / Next.js",

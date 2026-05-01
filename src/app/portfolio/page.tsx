@@ -81,12 +81,13 @@ export default function PortfolioPage() {
 
         {/* Mobile : liste de cartes empilées (< md) */}
         <ul className="mt-6 space-y-3 md:hidden">
-          {sorted.map((a) => (
+          {sorted.map((a, idx) => (
             <li
               key={a.id}
               className="border border-rule bg-mist p-4"
             >
               <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                <span className="mr-2 text-accent">{String(idx + 1).padStart(2, "0")}</span>
                 {a.theme}
               </p>
               <h3 className="mt-2 font-display text-lg leading-tight">
@@ -184,6 +185,7 @@ export default function PortfolioPage() {
           <table className="w-full min-w-[900px] border-collapse text-sm">
             <thead className="bg-mist">
               <tr className="text-left">
+                <Th>#</Th>
                 <Th>Thème</Th>
                 <Th>Activité</Th>
                 <Th>Lieu</Th>
@@ -194,11 +196,16 @@ export default function PortfolioPage() {
               </tr>
             </thead>
             <tbody>
-              {sorted.map((a) => (
+              {sorted.map((a, idx) => (
                 <tr
                   key={a.id}
                   className="border-t border-rule transition-colors hover:bg-mist/50"
                 >
+                  <Td>
+                    <span className="font-mono text-[10px] text-ash">
+                      {String(idx + 1).padStart(2, "0")}
+                    </span>
+                  </Td>
                   <Td>
                     <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
                       {a.theme}
@@ -249,7 +256,7 @@ export default function PortfolioPage() {
               ))}
               {/* Ligne total */}
               <tr className="border-t-2 border-ink bg-mist">
-                <Td colSpan={4}>
+                <Td colSpan={5}>
                   <span className="font-mono text-[11px] uppercase tracking-[0.2em]">
                     Total
                   </span>
