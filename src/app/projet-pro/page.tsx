@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import {
+  type Interest,
+  StaggeredInterestCards,
+} from "@/components/StaggeredInterestCards";
 
 export const metadata: Metadata = {
   title: "Projet professionnel — Mohamed Mokhtar El Mazani",
@@ -6,18 +10,21 @@ export const metadata: Metadata = {
     "Projet professionnel : cible stage, forces, axes de travail, trajectoire vers infrastructure IT et administration système.",
 };
 
-const interests = [
+const interests: Interest[] = [
   {
     title: "Infrastructure IT",
     desc: "Administration système, virtualisation, cloud. Comprendre l'architecture qui fait tourner les applications.",
+    image: "/pictures/projet-pro/infrastructure-it.jpg",
   },
   {
     title: "Hardware & diagnostic",
     desc: "Montage PC, réparation, optimisation. Passion pour le matériel et la recherche de performance.",
+    image: "/pictures/projet-pro/hardware-diagnostic.jpg",
   },
   {
     title: "Support technique",
     desc: "Résolution de problèmes, assistance utilisateurs. Contact humain et satisfaction d'aider.",
+    image: "/pictures/projet-pro/technical-support.jpg",
   },
 ];
 
@@ -160,19 +167,7 @@ export default function ProjetProPage() {
 
       {/* [01] Domaines d'intérêt */}
       <Section num="01" title="Mes domaines d'intérêt">
-        <div className="grid gap-6 md:grid-cols-3">
-          {interests.map((i) => (
-            <article
-              key={i.title}
-              className="border border-rule bg-mist p-5 transition-colors hover:bg-frost"
-            >
-              <h3 className="font-display text-lg">{i.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink/80">
-                {i.desc}
-              </p>
-            </article>
-          ))}
-        </div>
+        <StaggeredInterestCards interests={interests} />
       </Section>
 
       {/* [02] Forces */}
