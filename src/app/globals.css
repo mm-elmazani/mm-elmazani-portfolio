@@ -6,13 +6,13 @@
   --color-mist: #deeef4;         /* surface douce (cyan très clair) */
   --color-frost: #c6e7f5;        /* surface élevée (cyan clair) */
   --color-sky: #97d9f6;          /* highlight / hover (cyan moyen) */
-  --color-ash: #a1a1aa;          /* texte secondaire / iron */
+  --color-ash: #52525b;          /* texte secondaire / iron — zinc-600 (contrast 6.1:1 sur bone) */
   --color-ink: #0b0b0c;          /* texte primaire */
   --color-deep: #082f49;         /* foncé cyan profond (sky-950) — accents sombres */
   --color-rule: rgba(11, 11, 12, 0.18);
 
   /* Accent */
-  --color-accent: #38bdf8;
+  --color-accent: #0369a1;       /* sky-700 — contrast 4.9:1 sur bone (WCAG AA) */
   --color-accent-soft: rgba(56, 189, 248, 0.15);
 
   /* Typographies */
