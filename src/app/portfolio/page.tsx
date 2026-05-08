@@ -8,6 +8,10 @@ import {
 } from "@/data/activities";
 import { getThemeIcon } from "@/lib/themeIcons";
 import { StaggeredActivityGrid } from "@/components/StaggeredActivityGrid";
+import {
+  StaggeredCounters,
+  type CounterItem,
+} from "@/components/StaggeredCounters";
 import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
@@ -22,6 +26,19 @@ export default function PortfolioPage() {
 
   // Trié pour la table (plus récent d'abord)
   const sorted = [...activities].sort((a, b) => b.date.localeCompare(a.date));
+
+  // Compteurs synthèse [00] — passés en props au Client Component
+  const synthCounters: CounterItem[] = [
+    { label: "Thèmes", value: t.themesCount, suffix: "/ 6" },
+    { label: "Activités", value: t.activitiesCount, suffix: "/ 6" },
+    { label: "Heures valorisées", value: t.hoursValued, suffix: "/ 60" },
+    {
+      label: "Heures réelles",
+      value: t.realHours,
+      suffix: t.realHours === 0 ? "à compléter" : "h",
+    },
+    { label: "Preuves", value: t.proofsCount, suffix: "documentées" },
+  ];
 
   return (
     <main className="mx-auto max-w-[1440px] px-5 py-14 md:px-12 md:py-24">
@@ -46,25 +63,7 @@ export default function PortfolioPage() {
         <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
           [00] Synthèse
         </h2>
-        <div className="mt-6 grid grid-cols-2 gap-px bg-rule md:grid-cols-5">
-          <Counter label="Thèmes" value={t.themesCount} suffix="/ 6" />
-          <Counter
-            label="Activités"
-            value={t.activitiesCount}
-            suffix="/ 6"
-          />
-          <Counter
-            label="Heures valorisées"
-            value={t.hoursValued}
-            suffix="/ 60"
-          />
-          <Counter
-            label="Heures réelles"
-            value={t.realHours}
-            suffix={t.realHours === 0 ? "à compléter" : "h"}
-          />
-          <Counter label="Preuves" value={t.proofsCount} suffix="documentées" />
-        </div>
+        <StaggeredCounters counters={synthCounters} />
         <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
           Stratégie : inscrire toutes les activités. Les professeurs valident
           ensuite les 60h sur l&apos;ensemble.
@@ -332,34 +331,6 @@ export default function PortfolioPage() {
 }
 
 /* ---------- helpers ---------- */
-
-function Counter({
-  label,
-  value,
-  suffix,
-}: {
-  label: string;
-  value: number;
-  suffix?: string;
-}) {
-  return (
-    <div className="flex flex-col justify-between bg-mist p-5">
-      <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
-        {label}
-      </p>
-      <div className="mt-6 flex items-baseline gap-2">
-        <span className="font-display text-4xl text-ink md:text-5xl">
-          {value}
-        </span>
-        {suffix && (
-          <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
-            {suffix}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
 
 function Th({
   children,
