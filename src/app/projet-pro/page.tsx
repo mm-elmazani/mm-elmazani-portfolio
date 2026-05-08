@@ -3,6 +3,7 @@ import {
   type Interest,
   StaggeredInterestCards,
 } from "@/components/StaggeredInterestCards";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
   title: "Projet professionnel — Mohamed Mokhtar El Mazani",
@@ -139,11 +140,10 @@ export default function ProjetProPage() {
         [02] Projet professionnel · phase consolidation
       </p>
 
-      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
-        En apprentissage
-        <br />
-        constant<span className="text-accent">.</span>
-      </h1>
+      <TypewriterTitle
+        text="En apprentissage constant."
+        className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl"
+      />
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         En BAC 3 TI, je ne cherche pas à figer un plan de carrière rigide. Je{" "}

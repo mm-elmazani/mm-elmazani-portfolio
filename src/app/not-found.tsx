@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
   title: "404 — Page introuvable",
@@ -13,10 +14,10 @@ export default function NotFound() {
         [404] · ressource introuvable
       </p>
 
-      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
-        Cette page<br />
-        n&apos;existe pas<span className="text-accent">.</span>
-      </h1>
+      <TypewriterTitle
+        text="Cette page n'existe pas."
+        className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl"
+      />
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         L&apos;URL que tu cherches n&apos;a jamais existé, ou alors elle a été

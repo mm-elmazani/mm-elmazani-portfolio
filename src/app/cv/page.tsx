@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
   title: "CV — Mohamed Mokhtar El Mazani",
@@ -207,11 +208,10 @@ export default function CVPage() {
 
       <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
         <div>
-          <h1 className="font-display text-4xl font-medium leading-[0.95] md:text-7xl">
-            Mohamed Mokhtar
-            <br />
-            El Mazani<span className="text-accent">.</span>
-          </h1>
+          <TypewriterTitle
+            text="Mohamed Mokhtar El Mazani."
+            className="font-display text-4xl font-medium leading-[0.95] md:text-7xl"
+          />
           <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-ash">
             Étudiant BAC 3 · Technologies de l&apos;Informatique · EPHEC
           </p>

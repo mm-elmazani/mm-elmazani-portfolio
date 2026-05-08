@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useReducedMotion } from 'framer-motion';
+import { TypewriterTitle } from './TypewriterTitle';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -41,15 +42,11 @@ export function StaggeredHero() {
         Portfolio · EPHEC BAC 3 TI · 2025 — 2026
       </motion.p>
 
-      {/* Hero title */}
-      <motion.h1
-        variants={itemVariants}
+      {/* Hero title — effet typewriter (animation indépendante du stagger parent) */}
+      <TypewriterTitle
+        text="Mohamed Mokhtar El Mazani."
         className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl lg:text-8xl"
-      >
-        Mohamed Mokhtar
-        <br />
-        El Mazani<span className="text-accent">.</span>
-      </motion.h1>
+      />
 
       {/* Description */}
       <motion.p

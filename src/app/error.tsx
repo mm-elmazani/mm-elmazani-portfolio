@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect } from "react";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export default function Error({
   error,
@@ -21,10 +22,10 @@ export default function Error({
         [500] · erreur côté application
       </p>
 
-      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
-        Quelque chose<br />
-        a planté<span className="text-accent">.</span>
-      </h1>
+      <TypewriterTitle
+        text="Quelque chose a planté."
+        className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl"
+      />
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         Une erreur est survenue côté application. Tu peux réessayer la page,

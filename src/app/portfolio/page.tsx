@@ -8,6 +8,7 @@ import {
 } from "@/data/activities";
 import { getThemeIcon } from "@/lib/themeIcons";
 import { StaggeredActivityGrid } from "@/components/StaggeredActivityGrid";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
   title: "Portfolio d'activités — Mohamed Mokhtar El Mazani",
@@ -29,11 +30,10 @@ export default function PortfolioPage() {
         [03] Portfolio · activités d&apos;acquisition de compétences
       </p>
 
-      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
-        Apprendre
-        <br />
-        en faisant<span className="text-accent">.</span>
-      </h1>
+      <TypewriterTitle
+        text="Apprendre en faisant."
+        className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl"
+      />
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         Activités menées hors cursus pour acquérir des compétences techniques,

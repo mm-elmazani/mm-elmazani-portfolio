@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
   title: "Auto-évaluation — Mohamed Mokhtar El Mazani",
@@ -123,11 +124,10 @@ export default function AutoEvaluationPage() {
         [04] Auto-évaluation · lecture critique
       </p>
 
-      <h1 className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl">
-        Mesurer le
-        <br />
-        chemin parcouru<span className="text-accent">.</span>
-      </h1>
+      <TypewriterTitle
+        text="Mesurer le chemin parcouru."
+        className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl"
+      />
 
       <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/80 md:text-lg">
         Cette page est une <span className="text-ink">lecture honnête</span>
