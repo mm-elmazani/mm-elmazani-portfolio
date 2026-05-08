@@ -209,7 +209,7 @@ export default function CVPage() {
       <div className="mt-6 flex flex-wrap items-end justify-between gap-6">
         <div>
           <TypewriterTitle
-            text="Mohamed Mokhtar El Mazani."
+            text={"Mohamed Mokhtar\nEl Mazani."}
             className="font-display text-4xl font-medium leading-[0.95] md:text-7xl"
           />
           <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.2em] text-ash">

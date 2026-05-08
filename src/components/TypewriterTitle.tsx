@@ -63,11 +63,16 @@ export function TypewriterTitle({
       initial="hidden"
       animate="visible"
     >
-      {characters.map((char, index) => (
-        <motion.span key={index} variants={charVariants}>
-          {char}
-        </motion.span>
-      ))}
+      {characters.map((char, index) =>
+        char === '\n' ? (
+          // Retour à la ligne animé : apparaît à son tour dans la cascade
+          <motion.br key={index} variants={charVariants} />
+        ) : (
+          <motion.span key={index} variants={charVariants}>
+            {char}
+          </motion.span>
+        )
+      )}
       {/* Curseur inline — suit le dernier caractère visible.
           Si le texte wrap, le curseur suit naturellement la fin de la dernière ligne. */}
       <motion.span

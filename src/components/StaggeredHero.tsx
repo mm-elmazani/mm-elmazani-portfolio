@@ -44,7 +44,7 @@ export function StaggeredHero() {
 
       {/* Hero title — effet typewriter (animation indépendante du stagger parent) */}
       <TypewriterTitle
-        text="Mohamed Mokhtar El Mazani."
+        text={"Mohamed Mokhtar\nEl Mazani."}
         className="mt-6 font-display text-4xl font-medium leading-[0.95] md:text-7xl lg:text-8xl"
       />
 
