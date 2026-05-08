@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+import {
+  StaggeredActionPlan,
+  type ActionPlanItem,
+} from "@/components/StaggeredActionPlan";
 import { StaggeredReflectionBlocks } from "@/components/StaggeredReflectionBlocks";
 import { TypewriterTitle } from "@/components/TypewriterTitle";
 
@@ -45,7 +49,7 @@ const skillsProgress = [
   { name: "Soft skills (communication, équipe)", value: 70 },
 ];
 
-const actionPlan = [
+const actionPlan: ActionPlanItem[] = [
   {
     horizon: "Court terme",
     period: "Stage 2026 (en cours)",
@@ -195,24 +199,7 @@ export default function AutoEvaluationPage() {
 
       {/* [04] Plan d'action */}
       <Section num="04" title="Mon plan d'action">
-        <div className="grid gap-px bg-rule md:grid-cols-2">
-          {actionPlan.map((p, i) => (
-            <article key={p.title} className="flex flex-col bg-mist p-6 md:p-8">
-              <div className="flex items-baseline justify-between">
-                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
-                  {String(i + 1).padStart(2, "0")} · {p.horizon}
-                </p>
-                <p className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
-                  {p.period}
-                </p>
-              </div>
-              <h3 className="mt-4 font-display text-xl">{p.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-ink/80">
-                {p.desc}
-              </p>
-            </article>
-          ))}
-        </div>
+        <StaggeredActionPlan items={actionPlan} />
       </Section>
 
       {/* [05] Bilan & perspectives */}
