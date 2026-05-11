@@ -3,6 +3,7 @@ import {
   StaggeredActionPlan,
   type ActionPlanItem,
 } from "@/components/StaggeredActionPlan";
+import { StaggeredEvolutionTimeline } from "@/components/StaggeredEvolutionTimeline";
 import { StaggeredReflectionBlocks } from "@/components/StaggeredReflectionBlocks";
 import { StaggeredSkillsProgress } from "@/components/StaggeredSkillsProgress";
 import { TypewriterTitle } from "@/components/TypewriterTitle";
@@ -12,34 +13,6 @@ export const metadata: Metadata = {
   description:
     "Lecture critique de mon parcours BAC 3 TI à l'EPHEC : évolution, progression, plan d'action.",
 };
-
-const evolution = [
-  {
-    date: "septembre 2023",
-    title: "Début de formation EPHEC",
-    desc: "Bases limitées en programmation, beaucoup d'appréhension. Connaissances principalement hardware acquises en autodidacte.",
-  },
-  {
-    date: "septembre 2024",
-    title: "Premiers projets réussis",
-    desc: "Scripts Python, configuration de réseaux, premières manipulations Linux. Début de confiance dans mes capacités techniques.",
-  },
-  {
-    date: "juin 2025",
-    title: "Projets complexes maîtrisés",
-    desc: "VPS Docker complet, application MERN PowerTrack. Passage de scripts isolés à des architectures complètes.",
-  },
-  {
-    date: "octobre 2025",
-    title: "Networking & ouverture",
-    desc: "Tech Career Night AXA, Hackathon Upscaling. Premières connexions professionnelles, vision plus claire du marché IT.",
-  },
-  {
-    date: "avril 2026",
-    title: "Stage de fin d'études en cours",
-    desc: "Confrontation au réel : production, contraintes, équipe. Le stage façonne la suite de ma trajectoire.",
-  },
-];
 
 const skillsProgress = [
   { name: "Hardware et support IT", value: 85 },
@@ -124,26 +97,9 @@ export default function AutoEvaluationPage() {
         détaillés sur la page projet professionnel.
       </p>
 
-      {/* [01] Évolution — timeline */}
+      {/* [01] Évolution — roadmap verticale */}
       <Section num="01" title="Mon évolution">
-        <div className="divide-y divide-rule border-y border-rule">
-          {evolution.map((e) => (
-            <div
-              key={e.title}
-              className="grid gap-3 py-6 md:grid-cols-[200px_1fr] md:gap-10"
-            >
-              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
-                {e.date}
-              </p>
-              <div>
-                <h3 className="font-display text-xl">{e.title}</h3>
-                <p className="mt-2 max-w-prose text-base leading-relaxed text-ink/80">
-                  {e.desc}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <StaggeredEvolutionTimeline />
       </Section>
 
       {/* [02] Progression des compétences */}
