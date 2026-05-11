@@ -1,5 +1,19 @@
 import type { Metadata } from "next";
 import {
+  Award,
+  Briefcase,
+  Building2,
+  Factory,
+  GraduationCap,
+  Landmark,
+  Server,
+  Sparkles,
+  Target,
+  Terminal,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+import {
   type Interest,
   StaggeredInterestCards,
 } from "@/components/StaggeredInterestCards";
@@ -42,9 +56,10 @@ const axes = [
   "Gestion de projet : estimation, priorisation, travail en équipe Agile.",
 ];
 
-const skills = [
+const skills: { group: string; icon: LucideIcon; items: string[] }[] = [
   {
     group: "Techniques",
+    icon: Terminal,
     items: [
       "Administration Linux / Windows Server avancée",
       "Automatisation (Bash, PowerShell, Python)",
@@ -54,6 +69,7 @@ const skills = [
   },
   {
     group: "Professionnelles",
+    icon: Users,
     items: [
       "Gestion de projet IT",
       "Documentation technique",
@@ -63,6 +79,7 @@ const skills = [
   },
   {
     group: "Certifications visées",
+    icon: Award,
     items: [
       "CompTIA A+ (court terme)",
       "LPIC-1 — Linux Administrator (court terme)",
@@ -71,45 +88,53 @@ const skills = [
   },
 ];
 
-const timeline = [
+const timeline: { date: string; title: string; desc: string; icon: LucideIcon }[] = [
   {
     date: "2023 — juin 2026",
     title: "Bachelier TI · EPHEC",
     desc: "Formation complète : développement, réseaux, sécurité, infrastructure, gestion de projets.",
+    icon: GraduationCap,
   },
   {
     date: "Février — mai 2026",
     title: "Stage — Migration serveur VoIP · Commune d'Ottignies-LLN",
     desc: "En cours. Expérience terrain pour affiner mes choix et confronter mes compétences au réel.",
+    icon: Briefcase,
   },
   {
     date: "Post-études",
     title: "Poursuite de la formation",
     desc: "Continuer à me former dans les spécialisations découvertes en stage (infra, admin système, hardware) via certifications et expérience terrain.",
+    icon: Sparkles,
   },
   {
     date: "Horizon 2-3 ans",
     title: "Technicien / Ingénieur Infrastructure IT",
     desc: "Cible métier : Data Center Technician / Engineer, Infrastructure Engineer. Consolidation technique + spécialisation.",
+    icon: Target,
   },
 ];
 
-const companies = [
+const companies: { title: string; desc: string; icon: LucideIcon }[] = [
   {
     title: "ESN / Consulting IT",
     desc: "Diversité des clients et projets, exposition à plusieurs technologies et problématiques.",
+    icon: Building2,
   },
   {
     title: "PME industrielle",
     desc: "L'aspect concret et tangible de l'IT au service de la production, défis hardware/software.",
+    icon: Factory,
   },
   {
     title: "Secteur public",
     desc: "Impact social positif, enjeux de sécurité et fiabilité des systèmes critiques au service des citoyens.",
+    icon: Landmark,
   },
   {
     title: "Data center",
     desc: "Le cœur névralgique de l'infrastructure IT moderne : serveurs à l'échelle, réseaux haute performance, rigueur opérationnelle 24/7.",
+    icon: Server,
   },
 ];
 
@@ -207,9 +232,12 @@ export default function ProjetProPage() {
       {/* [04] Compétences à développer */}
       <Section num="04" title="Compétences à développer">
         <div className="grid gap-8 md:grid-cols-3">
-          {skills.map((s) => (
+          {skills.map((s) => {
+            const Icon = s.icon;
+            return (
             <div key={s.group}>
-              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
+              <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
+                <Icon aria-hidden className="h-4 w-4 text-accent" strokeWidth={1.75} />
                 {s.group}
               </p>
               <ul className="mt-3 space-y-2 text-sm">
@@ -221,14 +249,17 @@ export default function ProjetProPage() {
                 ))}
               </ul>
             </div>
-          ))}
+            );
+          })}
         </div>
       </Section>
 
       {/* [05] Trajectoire */}
       <Section num="05" title="Trajectoire">
         <div className="divide-y divide-rule border-y border-rule">
-          {timeline.map((t) => (
+          {timeline.map((t) => {
+            const Icon = t.icon;
+            return (
             <div
               key={t.title}
               className="grid gap-3 py-6 md:grid-cols-[200px_1fr] md:gap-10"
@@ -237,27 +268,35 @@ export default function ProjetProPage() {
                 {t.date}
               </p>
               <div>
-                <h3 className="font-display text-xl">{t.title}</h3>
+                <h3 className="flex items-center gap-3 font-display text-xl">
+                  <Icon aria-hidden className="h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                  {t.title}
+                </h3>
                 <p className="mt-2 max-w-prose text-sm leading-relaxed text-ink/80">
                   {t.desc}
                 </p>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </Section>
 
       {/* [06] Types d'entreprises */}
       <Section num="06" title="Types d'entreprises visées">
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {companies.map((c) => (
+          {companies.map((c) => {
+            const Icon = c.icon;
+            return (
             <article key={c.title} className="border border-rule bg-mist p-6">
-              <h3 className="font-display text-lg">{c.title}</h3>
+              <Icon aria-hidden className="h-6 w-6 text-accent" strokeWidth={1.75} />
+              <h3 className="mt-4 font-display text-lg">{c.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/80">
                 {c.desc}
               </p>
             </article>
-          ))}
+            );
+          })}
         </div>
       </Section>
 
