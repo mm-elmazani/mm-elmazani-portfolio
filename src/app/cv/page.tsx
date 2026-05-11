@@ -1,4 +1,14 @@
 import type { Metadata } from "next";
+import {
+  Briefcase,
+  FolderGit2,
+  GraduationCap,
+  Heart,
+  Languages,
+  Users,
+  Wrench,
+  type LucideIcon,
+} from "lucide-react";
 import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
@@ -145,18 +155,23 @@ const interests = [
 ];
 
 function Card({
-  num,
+  icon: Icon,
   title,
   children,
 }: {
-  num: string;
+  icon: LucideIcon;
   title: string;
   children: React.ReactNode;
 }) {
   return (
     <section className="border border-rule bg-paper p-6 md:p-8">
-      <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
-        [{num}] {title}
+      <h2 className="flex items-center gap-3 font-display text-2xl md:text-3xl">
+        <Icon
+          aria-hidden
+          className="h-6 w-6 shrink-0 text-accent md:h-7 md:w-7"
+          strokeWidth={1.75}
+        />
+        {title}
       </h2>
       <div className="mt-6">{children}</div>
     </section>
@@ -257,7 +272,7 @@ export default function CVPage() {
       <div className="mt-12 grid gap-6 md:grid-cols-[300px_1fr] md:gap-8">
         {/* SIDEBAR — skills / soft / langues */}
         <aside className="flex flex-col gap-6">
-          <Card num="01" title="Compétences techniques">
+          <Card icon={Wrench} title="Compétences techniques">
             <div className="space-y-5">
               {skills.map((s) => (
                 <div key={s.group}>
@@ -279,7 +294,7 @@ export default function CVPage() {
             </div>
           </Card>
 
-          <Card num="02" title="Soft skills">
+          <Card icon={Users} title="Soft skills">
             <ul className="space-y-2 text-sm">
               {softSkills.map((s) => (
                 <li key={s} className="flex gap-3">
@@ -290,7 +305,7 @@ export default function CVPage() {
             </ul>
           </Card>
 
-          <Card num="03" title="Langues">
+          <Card icon={Languages} title="Langues">
             <div className="space-y-4">
               {languages.map((l) => (
                 <div key={l.lang}>
@@ -318,15 +333,15 @@ export default function CVPage() {
 
         {/* MAIN — formation / exp / projets / intérêts */}
         <div className="flex flex-col gap-6">
-          <Card num="04" title="Formation">
+          <Card icon={GraduationCap} title="Formation">
             <TimelineBlock items={formations} />
           </Card>
 
-          <Card num="05" title="Expérience professionnelle">
+          <Card icon={Briefcase} title="Expérience professionnelle">
             <TimelineBlock items={experiences} />
           </Card>
 
-          <Card num="06" title="Projets & réalisations">
+          <Card icon={FolderGit2} title="Projets & réalisations">
             <div className="grid gap-4 md:grid-cols-2">
               {projects.map((p) => (
                 <article
@@ -352,7 +367,7 @@ export default function CVPage() {
             </div>
           </Card>
 
-          <Card num="07" title="Centres d'intérêt">
+          <Card icon={Heart} title="Centres d'intérêt">
             <ul className="flex flex-wrap gap-2">
               {interests.map((i) => (
                 <li
