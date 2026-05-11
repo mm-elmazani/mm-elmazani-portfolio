@@ -110,7 +110,7 @@ const softSkills = [
 
 const projects = [
   {
-    title: "TFE — Migration serveur VoIP",
+    title: "Projet de Stage — Migration serveur VoIP",
     desc: "Travail de fin d'études : migration de l'infrastructure VoIP de la commune d'Ottignies-Louvain-la-Neuve. Analyse de l'existant, planification, configuration et bascule en production.",
     stack: ["VoIP", "Réseaux", "Linux", "Production"],
   },
@@ -125,9 +125,14 @@ const projects = [
     stack: ["MERN", "IoT", "MQTT"],
   },
   {
-    title: "PC Gaming Custom",
-    desc: "Assemblage et optimisation de PC gaming pour clients : overclocking, benchmarking.",
-    stack: ["Hardware", "Windows", "OC"],
+    title: "Boîte-alerte — boîte aux lettres intelligente",
+    desc: "Boîte aux lettres connectée détectant l'arrivée du courrier et notifiant l'utilisateur en temps réel, avec messages personnalisables en cas d'absence.",
+    stack: ["ESP32", "IoT", "Firmware", "Backend", "Équipe"],
+  },
+  {
+    title: "Accordeur de guitare numérique",
+    desc: "Détection de la fréquence fondamentale d'une corde de guitare par autocorrélation (FFT), identification de la note (EADGBE) et indication de l'accordage en cents (précision MAE ≤ 6 cents).",
+    stack: ["Python", "NumPy", "SciPy", "DSP", "FFT"],
   },
 ];
 
@@ -149,7 +154,7 @@ function Card({
   children: React.ReactNode;
 }) {
   return (
-    <section className="border border-rule bg-mist p-6 md:p-8">
+    <section className="border border-rule bg-paper p-6 md:p-8">
       <h2 className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
         [{num}] {title}
       </h2>
