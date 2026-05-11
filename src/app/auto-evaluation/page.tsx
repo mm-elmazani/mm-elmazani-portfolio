@@ -4,6 +4,7 @@ import {
   type ActionPlanItem,
 } from "@/components/StaggeredActionPlan";
 import { StaggeredReflectionBlocks } from "@/components/StaggeredReflectionBlocks";
+import { StaggeredSkillsProgress } from "@/components/StaggeredSkillsProgress";
 import { TypewriterTitle } from "@/components/TypewriterTitle";
 
 export const metadata: Metadata = {
@@ -150,28 +151,7 @@ export default function AutoEvaluationPage() {
         <p className="max-w-prose font-mono text-[11px] uppercase tracking-[0.15em] text-ash">
           Auto-estimation à date · 0 % débutant → 100 % autonome senior
         </p>
-        <div className="mt-8 space-y-6">
-          {skillsProgress.map((s) => (
-            <div key={s.name}>
-              <div className="flex items-baseline justify-between">
-                <p className="font-sans text-base">{s.name}</p>
-                <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-accent">
-                  {s.value}%
-                </p>
-              </div>
-              <div className="mt-2 h-1.5 w-full overflow-hidden bg-rule">
-                <div
-                  className="h-full bg-accent transition-all"
-                  style={{ width: `${s.value}%` }}
-                  aria-valuenow={s.value}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  role="progressbar"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+        <StaggeredSkillsProgress items={skillsProgress} />
       </Section>
 
       {/* [03] Réflexion personnelle */}
