@@ -38,3 +38,26 @@ body {
   background-color: var(--color-accent);
   color: var(--color-bone);
 }
+
+/* Fond animé global — grille qui défile, masquée en bas pour préserver la lisibilité */
+@keyframes bg-grid-scroll {
+  0%   { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  opacity: 0.6;
+  animation: bg-grid-scroll 0.92s linear infinite;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40vh, rgba(0,0,0,0) 80vh);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 40vh, rgba(0,0,0,0) 80vh);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+}

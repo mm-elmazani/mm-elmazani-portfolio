@@ -40,7 +40,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className="min-h-full flex flex-col bg-bone text-ink font-sans"
+        className="min-h-full flex flex-col text-ink font-sans"
         suppressHydrationWarning
       >
         <NavBar />
