@@ -181,7 +181,7 @@ export default function PortfolioPage() {
         </ul>
 
         {/* Desktop : tableau (>= md) */}
-        <div className="mt-6 hidden overflow-x-auto border border-rule md:block">
+        <div className="mt-6 hidden overflow-x-auto border border-rule bg-paper md:block">
           <table className="w-full min-w-[900px] border-collapse text-sm">
             <thead className="bg-mist">
               <tr className="text-left">
@@ -199,7 +199,7 @@ export default function PortfolioPage() {
               {sorted.map((a, idx) => (
                 <tr
                   key={a.id}
-                  className="border-t border-rule transition-colors hover:bg-mist/50"
+                  className="border-t border-rule transition-colors hover:bg-bone"
                 >
                   <Td>
                     <span className="font-mono text-[10px] text-ash">
