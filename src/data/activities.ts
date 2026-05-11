@@ -53,6 +53,8 @@ export type Activity = {
   location: string | null; // lieu (rubric)
   status: "completed" | "ongoing" | "planned";
   proof: Proof;
+  /** Vignette affichée sur la carte du portfolio. Optionnel — fallback sur proof.images[0]. */
+  thumbnail?: string;
   description: string;
   reflection: Reflection;
   skills: string[];
@@ -86,6 +88,7 @@ export const activities: Activity[] = [
         "/files/proofs/hackathon-electro-2024/soudure.jpg",
       ],
     },
+    thumbnail: "/files/proofs/hackathon-electro-2024/photo-hackathon-2024.jpg",
     description:
       "Mon tout premier hackathon : 48h à l'EPHEC sur le thème « récupérer de l'ancien pour imaginer et créer des produits modernes ». Avec mon équipe, nous avons transformé un vieux tamtam en baffle Bluetooth fonctionnel — un week-end intense entre challenge technique et amusement.",
     reflection: {
@@ -163,6 +166,7 @@ export const activities: Activity[] = [
         },
       ],
     },
+    thumbnail: "/files/proofs/reparation-smartphones-2024/reparation_tel_1.0.jpeg",
     description:
       "Depuis fin 2023, je répare des smartphones à la maison pour des amis et des membres de ma famille — principalement des iPhones (écran, batterie, caméra) et plus rarement un Samsung. Cette pratique a démarré par envie d'élargir mes réparations au-delà des PC, et continue aujourd'hui de manière régulière.",
     reflection: {
@@ -229,6 +233,7 @@ export const activities: Activity[] = [
         },
       ],
     },
+    thumbnail: "/files/proofs/montage-pc-gaming-2024/montage_pc_1.0.jpeg",
     description:
       "Assemblage de plusieurs PC gaming sur mesure pour des particuliers (configurations adaptées à différents besoins et budgets) et intervention de réparation matérielle sur un poste existant.",
     reflection: {
@@ -272,6 +277,7 @@ export const activities: Activity[] = [
         "/files/proofs/labo-electronique-cables-2025/restoration-cables-labo.jpeg",
       ],
     },
+    thumbnail: "/files/proofs/labo-electronique-cables-2025/restoration-cables-labo.jpeg",
     description:
       "Session pratique de restauration des câbles du laboratoire électronique de l'EPHEC.",
     reflection: {
@@ -331,6 +337,7 @@ export const activities: Activity[] = [
         "/files/proofs/tech-career-night-axa-2025/axa-17-soiree-3.jpg",
       ],
     },
+    thumbnail: "/files/proofs/tech-career-night-axa-2025/axa-02-badge.jpg",
     description:
       "Tech Career Night AXA Belgium au siège de Bruxelles. Découverte de l'innovation IT, IA, Cloud et transformation digitale dans l'assurance.",
     reflection: {
@@ -396,6 +403,7 @@ export const activities: Activity[] = [
         },
       ],
     },
+    thumbnail: "/files/proofs/visite-sett-namur-2025/20260129_103027438_iOS.jpg",
     description:
       "Visite du SETT Expo (Salon Education Tech) à Namur Expo : découverte des solutions technologiques appliquées au secteur de l'éducation — tableaux blancs interactifs, outils pédagogiques IA, applications spécialisées — et networking avec des entreprises tech et professionnels du secteur.",
     reflection: {
@@ -446,6 +454,7 @@ export const activities: Activity[] = [
         "/files/proofs/conference-cybersecurite-redsystem-2025/20251104_112507000_iOS.png",
       ],
     },
+    thumbnail: "/files/proofs/conference-cybersecurite-redsystem-2025/20251104_110138000_iOS.png",
     description:
       "Conférence en ligne d'1h donnée par Mme Cynthia Collinet (Red System) : panorama des menaces cyber actuelles — fuites de données et force brute, attaques par macros Office, outils physiques du hacker (Flipper Zero, câble OMG), ransomware, deepfakes & IA criminelle.",
     reflection: {
@@ -554,6 +563,7 @@ export const activities: Activity[] = [
         },
       ],
     },
+    thumbnail: "/files/proofs/homelab-personnel-2025/homelab-serveurs.jpeg",
     description:
       "Mise en place et exploitation d'un homelab personnel à partir de PC reconditionnés et de matériel d'occasion. Déploiement d'une stack riche de services auto-hébergés pour mettre en pratique mes compétences d'administration système acquises en cours, dans un environnement réel et évolutif.",
     reflection: {
@@ -600,12 +610,12 @@ export const activities: Activity[] = [
       images: [],
       links: [
         { label: "elmzn.be — site personnel (production)", url: "https://elmzn.be/" },
-        { label: "EchoTask — gestion de tâches", url: "https://github.com/dexteee-r/EchoTask" },
-        { label: "AchatLIST-WebAPP — liste d'achats partagée", url: "https://github.com/dexteee-r/AchatLIST-WebAPP" },
+        { label: "EchoTask — gestion de tâches", url: "https://echoootask.netlify.app/" },
+        { label: "AchatLIST-WebAPP — liste d'achats partagée", url: "https://achat-list-web-app.vercel.app/" },
         { label: "WIDGET Monitor — overlay perf système", url: "https://github.com/dexteee-r/WIDGET-Monitor_Perfomance_Overlay" },
         { label: "Windows Music Overlay Server", url: "https://github.com/dexteee-r/Windows-Music-overlay-server" },
-        { label: "SolveRP — site communauté EmpireSunna", url: "https://github.com/dexteee-r/SolveRP-EmpireSunna" },
-        { label: "top4cars-website — site auto", url: "https://github.com/dexteee-r/top4cars-website" },
+        { label: "SolveRP — site communauté EmpireSunna", url: "https://solve-rpsuna-empire.vercel.app/" },
+        { label: "top4cars-website — site auto", url: "https://top4cars-website.vercel.app/fr" },
       ],
     },
     description:
@@ -665,6 +675,7 @@ export const activities: Activity[] = [
         },
       ],
     },
+    thumbnail: "/files/proofs/jobiste-printemps-sciences-2025/animation-bras-robotise.jpeg",
     description:
       "Job d'animateur lors du Printemps des Sciences à l'EPHEC : démonstration et initiation à l'utilisation d'un bras robotisé industriel à des élèves de 4e secondaire, via une mini-compétition ludique de construction d'une tour de Kapla pilotée à la télécommande.",
     reflection: {

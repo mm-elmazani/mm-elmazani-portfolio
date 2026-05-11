@@ -44,32 +44,48 @@ export function StaggeredActivityGrid({ items }: StaggeredActivityGridProps) {
       viewport={{ once: true, margin: '-60px' }}
       variants={containerVariants}
     >
-      {items.map((a) => (
-        <motion.div key={a.id} variants={itemVariants} className="flex">
-          <Link
-            href={`/portfolio/${a.slug}`}
-            className="group flex h-full w-full flex-col bg-mist p-6 transition-colors hover:bg-frost"
-          >
-            <div className="flex items-start justify-between gap-3">
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
-                {a.type} · {a.hoursValued}h
-              </span>
-              <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-accent transition-transform group-hover:translate-x-0.5">
-                →
-              </span>
-            </div>
-            <h4 className="mt-3 font-display text-lg leading-tight">
-              {a.title}
-            </h4>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/80">
-              {a.description}
-            </p>
-            <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
-              {formatDate(a.date)}
-            </p>
-          </Link>
-        </motion.div>
-      ))}
+      {items.map((a) => {
+        const thumb = a.thumbnail ?? a.proof.images?.[0];
+        return (
+          <motion.div key={a.id} variants={itemVariants} className="flex">
+            <Link
+              href={`/portfolio/${a.slug}`}
+              className="group flex h-full w-full flex-col overflow-hidden bg-mist transition-colors hover:bg-frost"
+            >
+              {thumb && (
+                <div className="aspect-[16/9] overflow-hidden bg-bone">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={thumb}
+                    alt=""
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-6">
+                <div className="flex items-start justify-between gap-3">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                    {a.type} · {a.hoursValued}h
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-accent transition-transform group-hover:translate-x-0.5">
+                    →
+                  </span>
+                </div>
+                <h4 className="mt-3 font-display text-lg leading-tight">
+                  {a.title}
+                </h4>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink/80">
+                  {a.description}
+                </p>
+                <p className="mt-4 font-mono text-[10px] uppercase tracking-[0.15em] text-ash">
+                  {formatDate(a.date)}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+        );
+      })}
     </motion.div>
   );
 }
